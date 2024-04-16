@@ -1,0 +1,707 @@
+Analysis & Synthesis report for ALU
+Tue Apr 16 11:47:03 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "Connect_ALU:ALU|MUX:data_OUT"
+ 11. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[31]"
+ 12. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[30]"
+ 13. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[29]"
+ 14. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[28]"
+ 15. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[27]"
+ 16. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[26]"
+ 17. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[25]"
+ 18. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[24]"
+ 19. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[23]"
+ 20. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[22]"
+ 21. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[21]"
+ 22. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[20]"
+ 23. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[19]"
+ 24. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[18]"
+ 25. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[17]"
+ 26. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[16]"
+ 27. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[15]"
+ 28. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[14]"
+ 29. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[13]"
+ 30. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[12]"
+ 31. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[11]"
+ 32. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[10]"
+ 33. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[9]"
+ 34. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[8]"
+ 35. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[7]"
+ 36. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[6]"
+ 37. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[5]"
+ 38. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[4]"
+ 39. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[3]"
+ 40. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[2]"
+ 41. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[1]"
+ 42. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[0]"
+ 43. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in"
+ 44. Elapsed Time Per Partition
+ 45. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Apr 16 11:47:03 2024      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; ALU                                        ;
+; Top-level Entity Name              ; ALU                                        ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 453                                        ;
+;     Total combinational functions  ; 453                                        ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 100                                        ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; ALU                ; ALU                ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; MUX.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/DoAN/MUX.sv     ;         ;
+; X_OR.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/DoAN/X_OR.sv    ;         ;
+; SRL_SRA.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/DoAN/SRL_SRA.sv ;         ;
+; SLTU.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/DoAN/SLTU.sv    ;         ;
+; SLT.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/DoAN/SLT.sv     ;         ;
+; SLL.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/DoAN/SLL.sv     ;         ;
+; OR_8.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/DoAN/OR_8.sv    ;         ;
+; AND_9.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/DoAN/AND_9.sv   ;         ;
+; AddSub.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/DoAN/AddSub.sv  ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/DoAN/ALU.sv     ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary   ;
++--------------------------+--------------------+
+; Resource                 ; Usage              ;
++--------------------------+--------------------+
+; I/O pins                 ; 100                ;
+; DSP block 9-bit elements ; 0                  ;
+; Maximum fan-out node     ; operand_b[0]~input ;
+; Maximum fan-out          ; 89                 ;
+; Total fan-out            ; 1734               ;
+; Average fan-out          ; 2.66               ;
++--------------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                        ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+; |ALU                                      ; 453 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 100  ; 0            ; |ALU                                                                                                    ; work         ;
+;    |Connect_ALU:ALU|                      ; 453 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU                                                                                    ; work         ;
+;       |MUX:data_OUT|                      ; 136 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|MUX:data_OUT                                                                       ; work         ;
+;          |MUX1:MUX_Sel|                   ; 136 (136)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel                                                          ; work         ;
+;       |connect:data_in|                   ; 317 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in                                                                    ; work         ;
+;          |SLL:D1_in|                      ; 94 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SLL:D1_in                                                          ; work         ;
+;             |Shift_left:SLL|              ; 94 (94)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SLL:D1_in|Shift_left:SLL                                           ; work         ;
+;          |SLT:D2_in|                      ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SLT:D2_in                                                          ; work         ;
+;             |LessThan1:LT_inst|           ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SLT:D2_in|LessThan1:LT_inst                                        ; work         ;
+;          |SRL_SRA:D5_in|                  ; 191 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in                                                      ; work         ;
+;             |SRL_SRA_sel:Sel_SR|          ; 191 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR                                   ; work         ;
+;                |MUX_2to1:Data_out|        ; 80 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|MUX_2to1:Data_out                 ; work         ;
+;                   |MUX2to1:MUX_Sel|       ; 80 (80)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|MUX_2to1:Data_out|MUX2to1:MUX_Sel ; work         ;
+;                |SRA:SRA_out|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRA:SRA_out                       ; work         ;
+;                   |Shift_Right_arit:SRA1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRA:SRA_out|Shift_Right_arit:SRA1 ; work         ;
+;                |SRL:SRL_out|              ; 109 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out                       ; work         ;
+;                   |Shift_Right:comb_3|    ; 109 (109)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3    ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3|ShiftRight0 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3|ShiftRight0 ;
+; 9:1                ; 15 bits   ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; No         ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel|Mux26                                                             ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3|ShiftRight0 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3|ShiftRight0 ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel|Mux15                                                             ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel|Mux4                                                              ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel|Mux2                                                              ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel|Mux0                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|MUX:data_OUT"                                                                                                               ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; D0   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "D0[31..1]" will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[31]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[30]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[29]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[28]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[27]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[26]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[25]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[24]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[23]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[22]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[21]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[20]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[19]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[18]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[17]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[16]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[15]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[14]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[13]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[12]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[11]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[10]"   ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[9]"    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[8]"    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[7]"    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[6]"    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[5]"    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[4]"    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[3]"    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[2]"    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[1]"    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[0]"    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in"                                                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; D0   ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "D0[31..1]" have no fanouts ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Tue Apr 16 11:46:59 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Warning (12090): Entity "MUX" obtained from "MUX.sv" instead of from Quartus II megafunction library
+Info (12021): Found 2 design units, including 2 entities, in source file mux.sv
+    Info (12023): Found entity 1: MUX1
+    Info (12023): Found entity 2: MUX
+Info (12021): Found 2 design units, including 2 entities, in source file x_or.sv
+    Info (12023): Found entity 1: XOR1
+    Info (12023): Found entity 2: X_OR
+Info (12021): Found 8 design units, including 8 entities, in source file srl_sra.sv
+    Info (12023): Found entity 1: MUX2to1
+    Info (12023): Found entity 2: MUX_2to1
+    Info (12023): Found entity 3: Shift_Right
+    Info (12023): Found entity 4: SRL
+    Info (12023): Found entity 5: Shift_Right_arit
+    Info (12023): Found entity 6: SRA
+    Info (12023): Found entity 7: SRL_SRA_sel
+    Info (12023): Found entity 8: SRL_SRA
+Info (12021): Found 3 design units, including 3 entities, in source file sltu.sv
+    Info (12023): Found entity 1: Complement_2
+    Info (12023): Found entity 2: LessThan
+    Info (12023): Found entity 3: SLTU
+Info (12021): Found 2 design units, including 2 entities, in source file slt.sv
+    Info (12023): Found entity 1: LessThan1
+    Info (12023): Found entity 2: SLT
+Info (12021): Found 2 design units, including 2 entities, in source file sll.sv
+    Info (12023): Found entity 1: Shift_left
+    Info (12023): Found entity 2: SLL
+Info (12021): Found 2 design units, including 2 entities, in source file or_8.sv
+    Info (12023): Found entity 1: OR1
+    Info (12023): Found entity 2: OR_8
+Info (12021): Found 2 design units, including 2 entities, in source file and_9.sv
+    Info (12023): Found entity 1: AND_1
+    Info (12023): Found entity 2: AND_9
+Info (12021): Found 4 design units, including 4 entities, in source file addsub.sv
+    Info (12023): Found entity 1: FullAdder
+    Info (12023): Found entity 2: Adder
+    Info (12023): Found entity 3: AddSub1
+    Info (12023): Found entity 4: AddSub
+Info (12021): Found 3 design units, including 3 entities, in source file alu.sv
+    Info (12023): Found entity 1: connect
+    Info (12023): Found entity 2: Connect_ALU
+    Info (12023): Found entity 3: ALU
+Warning (10236): Verilog HDL Implicit Net warning at SRL_SRA.sv(59): created implicit net for "_32bit1"
+Warning (10236): Verilog HDL Implicit Net warning at ALU.sv(70): created implicit net for "D0"
+Critical Warning (10846): Verilog HDL Instantiation warning at SRL_SRA.sv(47): instance has no name
+Info (12127): Elaborating entity "ALU" for the top level hierarchy
+Info (12128): Elaborating entity "Connect_ALU" for hierarchy "Connect_ALU:ALU"
+Info (12128): Elaborating entity "connect" for hierarchy "Connect_ALU:ALU|connect:data_in"
+Info (12128): Elaborating entity "AddSub" for hierarchy "Connect_ALU:ALU|connect:data_in|AddSub:D0_in"
+Info (12128): Elaborating entity "AddSub1" for hierarchy "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub"
+Info (12128): Elaborating entity "Adder" for hierarchy "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst"
+Info (12128): Elaborating entity "FullAdder" for hierarchy "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[0]"
+Info (12128): Elaborating entity "SLL" for hierarchy "Connect_ALU:ALU|connect:data_in|SLL:D1_in"
+Info (12128): Elaborating entity "Shift_left" for hierarchy "Connect_ALU:ALU|connect:data_in|SLL:D1_in|Shift_left:SLL"
+Info (12128): Elaborating entity "SLT" for hierarchy "Connect_ALU:ALU|connect:data_in|SLT:D2_in"
+Info (12128): Elaborating entity "LessThan1" for hierarchy "Connect_ALU:ALU|connect:data_in|SLT:D2_in|LessThan1:LT_inst"
+Info (12128): Elaborating entity "SLTU" for hierarchy "Connect_ALU:ALU|connect:data_in|SLTU:D3_in"
+Info (12128): Elaborating entity "LessThan" for hierarchy "Connect_ALU:ALU|connect:data_in|SLTU:D3_in|LessThan:SLTU"
+Info (12128): Elaborating entity "Complement_2" for hierarchy "Connect_ALU:ALU|connect:data_in|SLTU:D3_in|LessThan:SLTU|Complement_2:A1_B1"
+Info (12128): Elaborating entity "X_OR" for hierarchy "Connect_ALU:ALU|connect:data_in|X_OR:D4_in"
+Info (12128): Elaborating entity "XOR1" for hierarchy "Connect_ALU:ALU|connect:data_in|X_OR:D4_in|XOR1:Xor1"
+Info (12128): Elaborating entity "SRL_SRA" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in"
+Info (12128): Elaborating entity "SRL_SRA_sel" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR"
+Info (12128): Elaborating entity "SRL" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out"
+Info (12128): Elaborating entity "Shift_Right" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3"
+Info (12128): Elaborating entity "SRA" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRA:SRA_out"
+Info (12128): Elaborating entity "Shift_Right_arit" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRA:SRA_out|Shift_Right_arit:SRA1"
+Warning (10230): Verilog HDL assignment warning at SRL_SRA.sv(59): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at SRL_SRA.sv(60): truncated value with size 32 to match size of target (5)
+Info (12128): Elaborating entity "MUX_2to1" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|MUX_2to1:Data_out"
+Info (12128): Elaborating entity "MUX2to1" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|MUX_2to1:Data_out|MUX2to1:MUX_Sel"
+Info (12128): Elaborating entity "OR_8" for hierarchy "Connect_ALU:ALU|connect:data_in|OR_8:D6_in"
+Info (12128): Elaborating entity "OR1" for hierarchy "Connect_ALU:ALU|connect:data_in|OR_8:D6_in|OR1:or9"
+Info (12128): Elaborating entity "AND_9" for hierarchy "Connect_ALU:ALU|connect:data_in|AND_9:D7_in"
+Info (12128): Elaborating entity "AND_1" for hierarchy "Connect_ALU:ALU|connect:data_in|AND_9:D7_in|AND_1:AND_9"
+Info (12128): Elaborating entity "MUX" for hierarchy "Connect_ALU:ALU|MUX:data_OUT"
+Info (12128): Elaborating entity "MUX1" for hierarchy "Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel"
+Warning (12241): 34 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 553 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 68 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 453 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4726 megabytes
+    Info: Processing ended: Tue Apr 16 11:47:03 2024
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+
