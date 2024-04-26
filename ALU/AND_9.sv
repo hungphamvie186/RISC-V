@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module AND_1(
     input logic [31:0]A1,
     input logic [31:0]B1,

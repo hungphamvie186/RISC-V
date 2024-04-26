@@ -1,0 +1,27 @@
+module regfile (
+    input logic clk,          // Xung clock
+    input logic [4:0] write_address,  // Địa chỉ ghi
+    input logic [4:0] read_address_1, // Địa chỉ đọc 1
+    input logic [4:0] read_address_2, // Địa chỉ đọc 2
+    input logic write_enable, // Tín hiệu ghi
+    input logic [31:0] write_data, // Dữ liệu cần ghi
+    output logic [31:0] read_data_1, // Dữ liệu đọc 1
+    output logic [31:0] read_data_2  // Dữ liệu đọc 2
+);
+
+    // Packed array 32 thanh ghi, mỗi thanh ghi có 32 bit
+    logic [31:0] registers [0:31];
+
+    // Write operation
+    always_ff @(posedge clk) begin
+        if (write_enable) begin
+            // Ghi dữ liệu vào thanh ghi tại địa chỉ write_address
+            registers[write_address] <= write_data;
+        end
+    end
+
+    // Read operation
+    assign read_data_1 = registers[read_address_1];
+    assign read_data_2 = registers[read_address_2];
+
+endmodule

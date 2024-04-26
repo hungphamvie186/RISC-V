@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module Shift_left(
     input logic [31:0] A,
     input logic [31:0] B,

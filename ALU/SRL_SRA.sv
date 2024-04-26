@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module MUX2to1 (
     input logic [31:0] S0, S1,
     input logic  Sel,

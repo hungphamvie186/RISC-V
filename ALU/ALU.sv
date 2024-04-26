@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module connect (
     input logic funct7,
     input logic [31:0] A, B,
@@ -67,7 +68,7 @@ reg [31:0] D_0, D_1, D_2, D_3, D_4, D_5, D_6, D_7;
 	 .funct7(funct7),
 	 .A(A),
     .B(B),
-  .D0(D0),
+  .D0(D_0),
   .D1(D_1),
   .D2(D_2),
   .D3(D_3),
@@ -76,7 +77,7 @@ reg [31:0] D_0, D_1, D_2, D_3, D_4, D_5, D_6, D_7;
   .D6(D_6),
   .D7(D_7));
  MUX data_OUT(
-    .D0(D0),
+    .D0(D_0),
     .Sel(Sel),
    .D1(D_1),
    .D2(D_2),

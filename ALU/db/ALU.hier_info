@@ -67,38 +67,38 @@ operand_b[28] => operand_b[28].IN1
 operand_b[29] => operand_b[29].IN1
 operand_b[30] => operand_b[30].IN1
 operand_b[31] => operand_b[31].IN1
-alu_data[0] <= Connect_ALU:ALU.Out
-alu_data[1] <= Connect_ALU:ALU.Out
-alu_data[2] <= Connect_ALU:ALU.Out
-alu_data[3] <= Connect_ALU:ALU.Out
-alu_data[4] <= Connect_ALU:ALU.Out
-alu_data[5] <= Connect_ALU:ALU.Out
-alu_data[6] <= Connect_ALU:ALU.Out
-alu_data[7] <= Connect_ALU:ALU.Out
-alu_data[8] <= Connect_ALU:ALU.Out
-alu_data[9] <= Connect_ALU:ALU.Out
-alu_data[10] <= Connect_ALU:ALU.Out
-alu_data[11] <= Connect_ALU:ALU.Out
-alu_data[12] <= Connect_ALU:ALU.Out
-alu_data[13] <= Connect_ALU:ALU.Out
-alu_data[14] <= Connect_ALU:ALU.Out
-alu_data[15] <= Connect_ALU:ALU.Out
-alu_data[16] <= Connect_ALU:ALU.Out
-alu_data[17] <= Connect_ALU:ALU.Out
-alu_data[18] <= Connect_ALU:ALU.Out
-alu_data[19] <= Connect_ALU:ALU.Out
-alu_data[20] <= Connect_ALU:ALU.Out
-alu_data[21] <= Connect_ALU:ALU.Out
-alu_data[22] <= Connect_ALU:ALU.Out
-alu_data[23] <= Connect_ALU:ALU.Out
-alu_data[24] <= Connect_ALU:ALU.Out
-alu_data[25] <= Connect_ALU:ALU.Out
-alu_data[26] <= Connect_ALU:ALU.Out
-alu_data[27] <= Connect_ALU:ALU.Out
-alu_data[28] <= Connect_ALU:ALU.Out
-alu_data[29] <= Connect_ALU:ALU.Out
-alu_data[30] <= Connect_ALU:ALU.Out
-alu_data[31] <= Connect_ALU:ALU.Out
+alu_data[0] << Connect_ALU:ALU.Out
+alu_data[1] << Connect_ALU:ALU.Out
+alu_data[2] << Connect_ALU:ALU.Out
+alu_data[3] << Connect_ALU:ALU.Out
+alu_data[4] << Connect_ALU:ALU.Out
+alu_data[5] << Connect_ALU:ALU.Out
+alu_data[6] << Connect_ALU:ALU.Out
+alu_data[7] << Connect_ALU:ALU.Out
+alu_data[8] << Connect_ALU:ALU.Out
+alu_data[9] << Connect_ALU:ALU.Out
+alu_data[10] << Connect_ALU:ALU.Out
+alu_data[11] << Connect_ALU:ALU.Out
+alu_data[12] << Connect_ALU:ALU.Out
+alu_data[13] << Connect_ALU:ALU.Out
+alu_data[14] << Connect_ALU:ALU.Out
+alu_data[15] << Connect_ALU:ALU.Out
+alu_data[16] << Connect_ALU:ALU.Out
+alu_data[17] << Connect_ALU:ALU.Out
+alu_data[18] << Connect_ALU:ALU.Out
+alu_data[19] << Connect_ALU:ALU.Out
+alu_data[20] << Connect_ALU:ALU.Out
+alu_data[21] << Connect_ALU:ALU.Out
+alu_data[22] << Connect_ALU:ALU.Out
+alu_data[23] << Connect_ALU:ALU.Out
+alu_data[24] << Connect_ALU:ALU.Out
+alu_data[25] << Connect_ALU:ALU.Out
+alu_data[26] << Connect_ALU:ALU.Out
+alu_data[27] << Connect_ALU:ALU.Out
+alu_data[28] << Connect_ALU:ALU.Out
+alu_data[29] << Connect_ALU:ALU.Out
+alu_data[30] << Connect_ALU:ALU.Out
+alu_data[31] << Connect_ALU:ALU.Out
 
 
 |ALU|Connect_ALU:ALU
@@ -729,484 +729,453 @@ Out[31] <= Adder:adder_inst.Sum
 
 
 |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst
-A[0] => FullAdder:full_adder[0].A
-A[1] => FullAdder:full_adder[1].A
-A[2] => FullAdder:full_adder[2].A
-A[3] => FullAdder:full_adder[3].A
-A[4] => FullAdder:full_adder[4].A
-A[5] => FullAdder:full_adder[5].A
-A[6] => FullAdder:full_adder[6].A
-A[7] => FullAdder:full_adder[7].A
-A[8] => FullAdder:full_adder[8].A
-A[9] => FullAdder:full_adder[9].A
-A[10] => FullAdder:full_adder[10].A
-A[11] => FullAdder:full_adder[11].A
-A[12] => FullAdder:full_adder[12].A
-A[13] => FullAdder:full_adder[13].A
-A[14] => FullAdder:full_adder[14].A
-A[15] => FullAdder:full_adder[15].A
-A[16] => FullAdder:full_adder[16].A
-A[17] => FullAdder:full_adder[17].A
-A[18] => FullAdder:full_adder[18].A
-A[19] => FullAdder:full_adder[19].A
-A[20] => FullAdder:full_adder[20].A
-A[21] => FullAdder:full_adder[21].A
-A[22] => FullAdder:full_adder[22].A
-A[23] => FullAdder:full_adder[23].A
-A[24] => FullAdder:full_adder[24].A
-A[25] => FullAdder:full_adder[25].A
-A[26] => FullAdder:full_adder[26].A
-A[27] => FullAdder:full_adder[27].A
-A[28] => FullAdder:full_adder[28].A
-A[29] => FullAdder:full_adder[29].A
-A[30] => FullAdder:full_adder[30].A
-A[31] => FullAdder:full_adder[31].A
-B[0] => FullAdder:full_adder[0].B
-B[1] => FullAdder:full_adder[1].B
-B[2] => FullAdder:full_adder[2].B
-B[3] => FullAdder:full_adder[3].B
-B[4] => FullAdder:full_adder[4].B
-B[5] => FullAdder:full_adder[5].B
-B[6] => FullAdder:full_adder[6].B
-B[7] => FullAdder:full_adder[7].B
-B[8] => FullAdder:full_adder[8].B
-B[9] => FullAdder:full_adder[9].B
-B[10] => FullAdder:full_adder[10].B
-B[11] => FullAdder:full_adder[11].B
-B[12] => FullAdder:full_adder[12].B
-B[13] => FullAdder:full_adder[13].B
-B[14] => FullAdder:full_adder[14].B
-B[15] => FullAdder:full_adder[15].B
-B[16] => FullAdder:full_adder[16].B
-B[17] => FullAdder:full_adder[17].B
-B[18] => FullAdder:full_adder[18].B
-B[19] => FullAdder:full_adder[19].B
-B[20] => FullAdder:full_adder[20].B
-B[21] => FullAdder:full_adder[21].B
-B[22] => FullAdder:full_adder[22].B
-B[23] => FullAdder:full_adder[23].B
-B[24] => FullAdder:full_adder[24].B
-B[25] => FullAdder:full_adder[25].B
-B[26] => FullAdder:full_adder[26].B
-B[27] => FullAdder:full_adder[27].B
-B[28] => FullAdder:full_adder[28].B
-B[29] => FullAdder:full_adder[29].B
-B[30] => FullAdder:full_adder[30].B
-B[31] => FullAdder:full_adder[31].B
-C_in => FullAdder:full_adder[0].Cin
-C_in => FullAdder:full_adder[1].Cin
-C_in => FullAdder:full_adder[2].Cin
-C_in => FullAdder:full_adder[3].Cin
-C_in => FullAdder:full_adder[4].Cin
-C_in => FullAdder:full_adder[5].Cin
-C_in => FullAdder:full_adder[6].Cin
-C_in => FullAdder:full_adder[7].Cin
-C_in => FullAdder:full_adder[8].Cin
-C_in => FullAdder:full_adder[9].Cin
-C_in => FullAdder:full_adder[10].Cin
-C_in => FullAdder:full_adder[11].Cin
-C_in => FullAdder:full_adder[12].Cin
-C_in => FullAdder:full_adder[13].Cin
-C_in => FullAdder:full_adder[14].Cin
-C_in => FullAdder:full_adder[15].Cin
-C_in => FullAdder:full_adder[16].Cin
-C_in => FullAdder:full_adder[17].Cin
-C_in => FullAdder:full_adder[18].Cin
-C_in => FullAdder:full_adder[19].Cin
-C_in => FullAdder:full_adder[20].Cin
-C_in => FullAdder:full_adder[21].Cin
-C_in => FullAdder:full_adder[22].Cin
-C_in => FullAdder:full_adder[23].Cin
-C_in => FullAdder:full_adder[24].Cin
-C_in => FullAdder:full_adder[25].Cin
-C_in => FullAdder:full_adder[26].Cin
-C_in => FullAdder:full_adder[27].Cin
-C_in => FullAdder:full_adder[28].Cin
-C_in => FullAdder:full_adder[29].Cin
-C_in => FullAdder:full_adder[30].Cin
-C_in => FullAdder:full_adder[31].Cin
-Sum[0] <= FullAdder:full_adder[0].S
-Sum[1] <= FullAdder:full_adder[1].S
-Sum[2] <= FullAdder:full_adder[2].S
-Sum[3] <= FullAdder:full_adder[3].S
-Sum[4] <= FullAdder:full_adder[4].S
-Sum[5] <= FullAdder:full_adder[5].S
-Sum[6] <= FullAdder:full_adder[6].S
-Sum[7] <= FullAdder:full_adder[7].S
-Sum[8] <= FullAdder:full_adder[8].S
-Sum[9] <= FullAdder:full_adder[9].S
-Sum[10] <= FullAdder:full_adder[10].S
-Sum[11] <= FullAdder:full_adder[11].S
-Sum[12] <= FullAdder:full_adder[12].S
-Sum[13] <= FullAdder:full_adder[13].S
-Sum[14] <= FullAdder:full_adder[14].S
-Sum[15] <= FullAdder:full_adder[15].S
-Sum[16] <= FullAdder:full_adder[16].S
-Sum[17] <= FullAdder:full_adder[17].S
-Sum[18] <= FullAdder:full_adder[18].S
-Sum[19] <= FullAdder:full_adder[19].S
-Sum[20] <= FullAdder:full_adder[20].S
-Sum[21] <= FullAdder:full_adder[21].S
-Sum[22] <= FullAdder:full_adder[22].S
-Sum[23] <= FullAdder:full_adder[23].S
-Sum[24] <= FullAdder:full_adder[24].S
-Sum[25] <= FullAdder:full_adder[25].S
-Sum[26] <= FullAdder:full_adder[26].S
-Sum[27] <= FullAdder:full_adder[27].S
-Sum[28] <= FullAdder:full_adder[28].S
-Sum[29] <= FullAdder:full_adder[29].S
-Sum[30] <= FullAdder:full_adder[30].S
-Sum[31] <= FullAdder:full_adder[31].S
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+A[16] => A[16].IN1
+A[17] => A[17].IN1
+A[18] => A[18].IN1
+A[19] => A[19].IN1
+A[20] => A[20].IN1
+A[21] => A[21].IN1
+A[22] => A[22].IN1
+A[23] => A[23].IN1
+A[24] => A[24].IN1
+A[25] => A[25].IN1
+A[26] => A[26].IN1
+A[27] => A[27].IN1
+A[28] => A[28].IN1
+A[29] => A[29].IN1
+A[30] => A[30].IN1
+A[31] => A[31].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+B[16] => B[16].IN1
+B[17] => B[17].IN1
+B[18] => B[18].IN1
+B[19] => B[19].IN1
+B[20] => B[20].IN1
+B[21] => B[21].IN1
+B[22] => B[22].IN1
+B[23] => B[23].IN1
+B[24] => B[24].IN1
+B[25] => B[25].IN1
+B[26] => B[26].IN1
+B[27] => B[27].IN1
+B[28] => B[28].IN1
+B[29] => B[29].IN1
+B[30] => B[30].IN1
+B[31] => B[31].IN1
+C_in => carry[0].IN1
+Sum[0] <= FullAdder:adder_loop[0].full_adder.S
+Sum[1] <= FullAdder:adder_loop[1].full_adder.S
+Sum[2] <= FullAdder:adder_loop[2].full_adder.S
+Sum[3] <= FullAdder:adder_loop[3].full_adder.S
+Sum[4] <= FullAdder:adder_loop[4].full_adder.S
+Sum[5] <= FullAdder:adder_loop[5].full_adder.S
+Sum[6] <= FullAdder:adder_loop[6].full_adder.S
+Sum[7] <= FullAdder:adder_loop[7].full_adder.S
+Sum[8] <= FullAdder:adder_loop[8].full_adder.S
+Sum[9] <= FullAdder:adder_loop[9].full_adder.S
+Sum[10] <= FullAdder:adder_loop[10].full_adder.S
+Sum[11] <= FullAdder:adder_loop[11].full_adder.S
+Sum[12] <= FullAdder:adder_loop[12].full_adder.S
+Sum[13] <= FullAdder:adder_loop[13].full_adder.S
+Sum[14] <= FullAdder:adder_loop[14].full_adder.S
+Sum[15] <= FullAdder:adder_loop[15].full_adder.S
+Sum[16] <= FullAdder:adder_loop[16].full_adder.S
+Sum[17] <= FullAdder:adder_loop[17].full_adder.S
+Sum[18] <= FullAdder:adder_loop[18].full_adder.S
+Sum[19] <= FullAdder:adder_loop[19].full_adder.S
+Sum[20] <= FullAdder:adder_loop[20].full_adder.S
+Sum[21] <= FullAdder:adder_loop[21].full_adder.S
+Sum[22] <= FullAdder:adder_loop[22].full_adder.S
+Sum[23] <= FullAdder:adder_loop[23].full_adder.S
+Sum[24] <= FullAdder:adder_loop[24].full_adder.S
+Sum[25] <= FullAdder:adder_loop[25].full_adder.S
+Sum[26] <= FullAdder:adder_loop[26].full_adder.S
+Sum[27] <= FullAdder:adder_loop[27].full_adder.S
+Sum[28] <= FullAdder:adder_loop[28].full_adder.S
+Sum[29] <= FullAdder:adder_loop[29].full_adder.S
+Sum[30] <= FullAdder:adder_loop[30].full_adder.S
+Sum[31] <= FullAdder:adder_loop[31].full_adder.S
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[0]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[0].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[1]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[1].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[2]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[2].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[3]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[3].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[4]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[4].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[5]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[5].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[6]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[6].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[7]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[7].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[8]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[8].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[9]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[9].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[10]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[10].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[11]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[11].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[12]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[12].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[13]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[13].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[14]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[14].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[15]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[15].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[16]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[16].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[17]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[17].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[18]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[18].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[19]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[19].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[20]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[20].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[21]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[21].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[22]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[22].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[23]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[23].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[24]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[24].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[25]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[25].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[26]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[26].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[27]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[27].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[28]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[28].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[29]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[29].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[30]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[30].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:full_adder[31]
+|ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[31].full_adder
 A => S.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-Cin => S.IN1
-Cin => Cout.IN1
+Z => S.IN1
+Z => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 

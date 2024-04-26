@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module MUX1 (
     input logic [31:0] D0, D1, D2, D3, D4, D5, D6, D7,
     input logic [2:0] Sel,
