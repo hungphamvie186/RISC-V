@@ -1,0 +1,69 @@
+`timescale 1ns/1ps
+
+module RV32_tb;
+
+    // Declare signals for inputs and outputs
+    logic rst;
+    logic clk;
+    logic Stop_en;
+    logic test_en;
+    logic [4:0] test_addr;
+    logic [31:0] ketqua;
+
+    // Instantiate the DUT (Device Under Test)
+    RV32 DUT (
+        .rst(rst),
+        .clk(clk),
+        .Stop_en(Stop_en),
+        .test_en(test_en),
+        .test_addr(test_addr),
+        .ketqua(ketqua)
+    );
+
+    // Clock generation
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk; // 100 MHz clock
+    end
+
+    // Test sequence
+    initial begin
+        // Initialize inputs
+        rst = 1;
+        Stop_en = 0;
+        test_en = 0;
+        test_addr = 5'b0;
+
+        // Wait for global reset to finish
+        #10;
+        rst = 0;
+
+        // Wait for PC to reach the address of the last instruction in imem
+        wait (DUT.cur_pc == 32'd36); // memory[8] address = 36 (because each instruction is 4 bytes)
+
+        // Set Stop_en to 1 to stop the system
+        #10;
+        Stop_en = 1;
+
+        // Wait for a few clock cycles to ensure the system stops
+        #20;
+
+        // Enable test mode and set test address to 3 to read x3
+        #10;
+        test_en = 1;
+        test_addr = 5'b0011;
+
+        // Wait for a few clock cycles to read the value
+        #20;
+
+        // Check the output in x3 register
+        if (ketqua == DUT.regfile_connect.Q[3]) begin
+            $display("Test passed: ketqua = %0d", ketqua);
+        end else begin
+            $display("Test failed: expected %0d, got %0d", DUT.regfile_connect.Q[3], ketqua);
+        end
+
+        // Finish simulation
+        $finish;
+    end
+endmodule

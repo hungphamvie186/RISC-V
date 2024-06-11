@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Apr 25 23:57:37 2024
+Fitter Status : Successful - Mon May 27 21:43:35 2024
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
-Revision Name : ALU
-Top-level Entity Name : ALU
+Revision Name : alu
+Top-level Entity Name : alu
 Family : Cyclone IV GX
 Device : EP4CGX22CF19C6
 Timing Models : Final
-Total logic elements : 558 / 21,280 ( 3 % )
-    Total combinational functions : 558 / 21,280 ( 3 % )
+Total logic elements : 0 / 21,280 ( 0 % )
+    Total combinational functions : 0 / 21,280 ( 0 % )
     Dedicated logic registers : 0 / 21,280 ( 0 % )
 Total registers : 0
 Total pins : 100 / 167 ( 60 % )

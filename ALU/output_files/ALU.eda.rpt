@@ -1,5 +1,5 @@
-EDA Netlist Writer report for ALU
-Thu Apr 25 23:57:49 2024
+EDA Netlist Writer report for alu
+Mon May 27 21:43:44 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Apr 25 23:57:49 2024 ;
-; Revision Name             ; ALU                                   ;
-; Top-level Entity Name     ; ALU                                   ;
+; EDA Netlist Writer Status ; Successful - Mon May 27 21:43:44 2024 ;
+; Revision Name             ; alu                                   ;
+; Top-level Entity Name     ; alu                                   ;
 ; Family                    ; Cyclone IV GX                         ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,20 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                    ;
-+---------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                               ;
-+---------------------------------------------------------------------------------------------------------------+
-; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/ALU_6_1200mv_85c_slow.vho      ;
-; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/ALU_6_1200mv_0c_slow.vho       ;
-; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/ALU_min_1200mv_0c_fast.vho     ;
-; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/ALU.vho                        ;
-; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/ALU_6_1200mv_85c_vhd_slow.sdo  ;
-; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/ALU_6_1200mv_0c_vhd_slow.sdo   ;
-; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/ALU_min_1200mv_0c_vhd_fast.sdo ;
-; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/ALU_vhd.sdo                    ;
-+---------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Simulation Generated Files                                                  ;
++-----------------------------------------------------------------------------+
+; Generated Files                                                             ;
++-----------------------------------------------------------------------------+
+; D:/Quartus file/lab3/alu/simulation/modelsim/alu_6_1200mv_85c_slow.vho      ;
+; D:/Quartus file/lab3/alu/simulation/modelsim/alu_6_1200mv_0c_slow.vho       ;
+; D:/Quartus file/lab3/alu/simulation/modelsim/alu_min_1200mv_0c_fast.vho     ;
+; D:/Quartus file/lab3/alu/simulation/modelsim/alu.vho                        ;
+; D:/Quartus file/lab3/alu/simulation/modelsim/alu_6_1200mv_85c_vhd_slow.sdo  ;
+; D:/Quartus file/lab3/alu/simulation/modelsim/alu_6_1200mv_0c_vhd_slow.sdo   ;
+; D:/Quartus file/lab3/alu/simulation/modelsim/alu_min_1200mv_0c_vhd_fast.sdo ;
+; D:/Quartus file/lab3/alu/simulation/modelsim/alu_vhd.sdo                    ;
++-----------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +88,20 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Apr 25 23:57:47 2024
-Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off ALU -c ALU
-Info (204019): Generated file ALU_6_1200mv_85c_slow.vho in folder "C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ALU_6_1200mv_0c_slow.vho in folder "C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ALU_min_1200mv_0c_fast.vho in folder "C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ALU.vho in folder "C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ALU_6_1200mv_85c_vhd_slow.sdo in folder "C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ALU_6_1200mv_0c_vhd_slow.sdo in folder "C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ALU_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ALU_vhd.sdo in folder "C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/simulation/modelsim/" for EDA simulation tool
+    Info: Processing started: Mon May 27 21:43:44 2024
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off alu -c alu
+Info (204019): Generated file alu_6_1200mv_85c_slow.vho in folder "D:/Quartus file/lab3/alu/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_6_1200mv_0c_slow.vho in folder "D:/Quartus file/lab3/alu/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_min_1200mv_0c_fast.vho in folder "D:/Quartus file/lab3/alu/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu.vho in folder "D:/Quartus file/lab3/alu/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_6_1200mv_85c_vhd_slow.sdo in folder "D:/Quartus file/lab3/alu/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_6_1200mv_0c_vhd_slow.sdo in folder "D:/Quartus file/lab3/alu/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_min_1200mv_0c_vhd_fast.sdo in folder "D:/Quartus file/lab3/alu/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_vhd.sdo in folder "D:/Quartus file/lab3/alu/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4629 megabytes
-    Info: Processing ended: Thu Apr 25 23:57:49 2024
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4624 megabytes
+    Info: Processing ended: Mon May 27 21:43:44 2024
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

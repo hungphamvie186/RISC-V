@@ -1,40 +1,79 @@
 `timescale 1ns/1ps
-module ALU_tb();
-    logic funct7;
-    logic [2:0] alu_op;
-    logic [31:0] operand_a, operand_b;
-	 logic [31:0] alu_data;
 
-    PC DUT (
-        .funct7(funct7),
-        .alu_op(alu_op),
-        .operand_a(operand_a),
-		  .operand_b(operand_b),
-		  .alu_data(alu_data)
+module alu_tb;
+
+    // Inputs
+    logic rst_n;
+    logic [3:0] A;
+    logic [3:0] B;
+    logic [2:0] op;
+
+    // Outputs
+    logic [4:0] Result;
+
+    // Instantiate the DUT (Device Under Test)
+    alu DUT (
+        .rst_n(rst_n),
+        .A(A),
+        .B(B),
+        .op(op),
+        .Result(Result)
     );
 
+    // Stimulus
     initial begin
-        #10; // Wait for some time to stabilize
+        // Initialize inputs
+        rst_n = 1;
+        A = 4'b0;
+        B = 4'b0;
+        op = 3'b0;
 
-        // Initialize random seed
-        $randomize();
+        // Reset the DUT
+        rst_n = 0;
+        #10 rst_n = 1;
 
-        // Generate random values for inputs
-        funct7 = $random;
-        alu_op = $random;
-        operand_a = $random;
-        operand_b = $random;
-		  #10;
+        // Test each operation with random inputs
+        repeat (10) begin
+            A = $random % 16; // Random 4-bit number
+            B = $random % 16; // Random 4-bit number
+            
+            // Test ADD operation
+            op = 3'b000;
+            #10 $display("ADD: A = %d, B = %d, Result = %d", A, B, Result);
 
-// Change random values after a delay
-repeat (10) begin
-    // Generate new random values
-    funct7 = $random;
-    alu_op = $random;
-    operand_a = $random;
-    operand_b = $random;
-    
-    // Apply delay before next randomization
-    #20;
+            // Test SUB operation
+            op = 3'b001;
+            #10 $display("SUB: A = %d, B = %d, Result = %d", A, B, Result);
+
+            // Test AND operation
+            op = 3'b010;
+            #10 $display("AND: A = %d, B = %d, Result = %d", A, B, Result);
+
+            // Test OR operation
+            op = 3'b011;
+            #10 $display("OR : A = %d, B = %d, Result = %d", A, B, Result);
+
+            // Test XOR operation
+            op = 3'b100;
+            #10 $display("XOR: A = %d, B = %d, Result = %d", A, B, Result);
+
+            // Test NOT operation
+            op = 3'b101;
+            #10 $display("NOT: A = %d, Result = %d", A, Result);
+
+            // Test Shift Right operation
+            op = 3'b110;
+            #10 $display("SHR: A = %d, B = %d, Result = %d", A, B, Result);
+
+            // Test Shift Left operation
+            op = 3'b111;
+            #10 $display("SHL: A = %d, B = %d, Result = %d", A, B, Result);
+
+            #20; // Wait before next set of random values
+        end
+
+        // Finish the simulation
+        $finish;
     end
+
 endmodule

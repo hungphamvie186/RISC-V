@@ -1,0 +1,10 @@
+module Controller (
+    input logic [6:0] opcode,
+    input logic[2:0] funct3,
+    input logic BrEq,BrLT,BrUn,funct7
+    output logic PCSel, Immsel, RegWEn, Asel, Bsel, funct7
+    output logic [1:0] resultSrc,
+    output logic [3:0] aluControl,
+    output logic [2:0] immSrc
+);
+endmodule

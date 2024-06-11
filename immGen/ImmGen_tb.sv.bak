@@ -1,0 +1,55 @@
+`timescale 1ns/1ps
+
+module ImmGen_tb;
+
+    // Inputs
+    logic [11:0] imm;
+    logic [1:0] ImmSel;
+
+    // Outputs
+    logic [31:0] Imm;
+
+    // Instantiate the DUT (Device Under Test)
+    ImmGen DUT (
+        .imm(imm),
+        .ImmSel(ImmSel),
+        .Imm(Imm)
+    );
+
+    // Stimulus
+    initial begin
+        // Test case 1: Signed positive number
+        ImmSel = 2'b00;
+        imm = 12'b0000_0000_0011; // 3 in decimal
+        #10;
+        $display("Test Case 1: ImmSel = %b, imm = %b, Imm = %h", ImmSel, imm, Imm);
+
+        // Test case 2: Signed negative number
+        ImmSel = 2'b00;
+        imm = 12'b1111_1111_1111; // -1 in decimal (two's complement)
+        #10;
+        $display("Test Case 2: ImmSel = %b, imm = %b, Imm = %h", ImmSel, imm, Imm);
+
+        // Test case 3: Unsigned number
+        ImmSel = 2'b01;
+        imm = 12'b0000_0000_1010; // 10 in decimal
+        #10;
+        $display("Test Case 3: ImmSel = %b, imm = %b, Imm = %h", ImmSel, imm, Imm);
+
+        // Test case 4: Unsigned number (boundary)
+        ImmSel = 2'b01;
+        imm = 12'b1111_1111_1111; // 4095 in decimal
+        #10;
+        $display("Test Case 4: ImmSel = %b, imm = %b, Imm = %h", ImmSel, imm, Imm);
+
+        // Test case 5: Default case
+        ImmSel = 2'b10;
+        imm = 12'b0000_0000_0001; // 1 in decimal
+        #10;
+        $display("Test Case 5: ImmSel = %b, imm = %b, Imm = %h", ImmSel, imm, Imm);
+
+        // Finish the simulation
+        #10 $finish;
+    end
+
+endmodule

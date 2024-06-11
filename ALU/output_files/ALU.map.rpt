@@ -1,5 +1,5 @@
-Analysis & Synthesis report for ALU
-Thu Apr 25 23:57:28 2024
+Analysis & Synthesis report for alu
+Mon May 27 21:43:26 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -14,10 +14,11 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[31].full_adder"
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "alu_Block:ALU|SLL:D1_in"
+ 10. Port Connectivity Checks: "alu_Block:ALU|AddSub:D0_in|Adder:adder_inst|FullAdder:adder_loop[31].full_adder"
+ 11. Port Connectivity Checks: "alu_Block:ALU|AddSub:D0_in|Adder:adder_inst"
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +44,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 25 23:57:28 2024      ;
+; Analysis & Synthesis Status        ; Successful - Mon May 27 21:43:26 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                      ; ALU                                        ;
-; Top-level Entity Name              ; ALU                                        ;
+; Revision Name                      ; alu                                        ;
+; Top-level Entity Name              ; alu                                        ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 558                                        ;
-;     Total combinational functions  ; 558                                        ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
 ;     Dedicated logic registers      ; 0                                          ;
 ; Total registers                    ; 0                                          ;
 ; Total pins                         ; 100                                        ;
@@ -69,7 +70,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; ALU                ; ALU                ;
+; Top-level entity name                                                      ; alu                ; alu                ;
 ; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -167,22 +168,13 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
-; MUX.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/MUX.sv     ;         ;
-; X_OR.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/X_OR.sv    ;         ;
-; SRL_SRA.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/SRL_SRA.sv ;         ;
-; SLTU.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/SLTU.sv    ;         ;
-; SLT.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/SLT.sv     ;         ;
-; SLL.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/SLL.sv     ;         ;
-; OR_8.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/OR_8.sv    ;         ;
-; AND_9.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/AND_9.sv   ;         ;
-; AddSub.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/AddSub.sv  ;         ;
-; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/phamv/OneDrive - hcmut.edu.vn/Máy tính/Do_AN1/ALU/ALU.sv     ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                        ;
++----------------------------------+-----------------+------------------------------+---------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path    ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------+---------+
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/Quartus file/lab3/alu/alu.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -192,77 +184,20 @@ applicable agreement for further details.
 +--------------------------+------------------+
 ; I/O pins                 ; 100              ;
 ; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; alu_op[1]~input  ;
-; Maximum fan-out          ; 94               ;
-; Total fan-out            ; 2081             ;
-; Average fan-out          ; 2.75             ;
+; Maximum fan-out node     ; funct7           ;
+; Maximum fan-out          ; 1                ;
+; Total fan-out            ; 100              ;
+; Average fan-out          ; 0.50             ;
 +--------------------------+------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                    ;
-+---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Library Name ;
-+---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
-; |ALU                                                    ; 558 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 100  ; 0            ; |ALU                                                                                                                  ; work         ;
-;    |Connect_ALU:ALU|                                    ; 558 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU                                                                                                  ; work         ;
-;       |MUX:data_OUT|                                    ; 176 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|MUX:data_OUT                                                                                     ; work         ;
-;          |MUX1:MUX_Sel|                                 ; 176 (176)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel                                                                        ; work         ;
-;       |connect:data_in|                                 ; 382 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in                                                                                  ; work         ;
-;          |AND_9:D7_in|                                  ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AND_9:D7_in                                                                      ; work         ;
-;             |AND_1:AND_9|                               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AND_9:D7_in|AND_1:AND_9                                                          ; work         ;
-;          |AddSub:D0_in|                                 ; 51 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in                                                                     ; work         ;
-;             |AddSub1:AddSub|                            ; 51 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub                                                      ; work         ;
-;                |Adder:adder_inst|                       ; 51 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst                                     ; work         ;
-;                   |FullAdder:adder_loop[0].full_adder|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[0].full_adder  ; work         ;
-;                   |FullAdder:adder_loop[10].full_adder| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[10].full_adder ; work         ;
-;                   |FullAdder:adder_loop[11].full_adder| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[11].full_adder ; work         ;
-;                   |FullAdder:adder_loop[12].full_adder| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[12].full_adder ; work         ;
-;                   |FullAdder:adder_loop[13].full_adder| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[13].full_adder ; work         ;
-;                   |FullAdder:adder_loop[14].full_adder| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[14].full_adder ; work         ;
-;                   |FullAdder:adder_loop[15].full_adder| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[15].full_adder ; work         ;
-;                   |FullAdder:adder_loop[16].full_adder| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[16].full_adder ; work         ;
-;                   |FullAdder:adder_loop[17].full_adder| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[17].full_adder ; work         ;
-;                   |FullAdder:adder_loop[18].full_adder| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[18].full_adder ; work         ;
-;                   |FullAdder:adder_loop[19].full_adder| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[19].full_adder ; work         ;
-;                   |FullAdder:adder_loop[1].full_adder|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[1].full_adder  ; work         ;
-;                   |FullAdder:adder_loop[20].full_adder| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[20].full_adder ; work         ;
-;                   |FullAdder:adder_loop[21].full_adder| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[21].full_adder ; work         ;
-;                   |FullAdder:adder_loop[22].full_adder| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[22].full_adder ; work         ;
-;                   |FullAdder:adder_loop[23].full_adder| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[23].full_adder ; work         ;
-;                   |FullAdder:adder_loop[24].full_adder| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[24].full_adder ; work         ;
-;                   |FullAdder:adder_loop[25].full_adder| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[25].full_adder ; work         ;
-;                   |FullAdder:adder_loop[26].full_adder| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[26].full_adder ; work         ;
-;                   |FullAdder:adder_loop[27].full_adder| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[27].full_adder ; work         ;
-;                   |FullAdder:adder_loop[28].full_adder| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[28].full_adder ; work         ;
-;                   |FullAdder:adder_loop[29].full_adder| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[29].full_adder ; work         ;
-;                   |FullAdder:adder_loop[2].full_adder|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[2].full_adder  ; work         ;
-;                   |FullAdder:adder_loop[30].full_adder| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[30].full_adder ; work         ;
-;                   |FullAdder:adder_loop[31].full_adder| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[31].full_adder ; work         ;
-;                   |FullAdder:adder_loop[3].full_adder|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[3].full_adder  ; work         ;
-;                   |FullAdder:adder_loop[4].full_adder|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[4].full_adder  ; work         ;
-;                   |FullAdder:adder_loop[5].full_adder|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[5].full_adder  ; work         ;
-;                   |FullAdder:adder_loop[6].full_adder|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[6].full_adder  ; work         ;
-;                   |FullAdder:adder_loop[7].full_adder|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[7].full_adder  ; work         ;
-;                   |FullAdder:adder_loop[8].full_adder|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[8].full_adder  ; work         ;
-;                   |FullAdder:adder_loop[9].full_adder|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[9].full_adder  ; work         ;
-;          |SLL:D1_in|                                    ; 98 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SLL:D1_in                                                                        ; work         ;
-;             |Shift_left:SLL|                            ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SLL:D1_in|Shift_left:SLL                                                         ; work         ;
-;          |SLT:D2_in|                                    ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SLT:D2_in                                                                        ; work         ;
-;             |LessThan1:LT_inst|                         ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SLT:D2_in|LessThan1:LT_inst                                                      ; work         ;
-;          |SLTU:D3_in|                                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SLTU:D3_in                                                                       ; work         ;
-;             |LessThan:SLTU|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SLTU:D3_in|LessThan:SLTU                                                         ; work         ;
-;          |SRL_SRA:D5_in|                                ; 186 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in                                                                    ; work         ;
-;             |SRL_SRA_sel:Sel_SR|                        ; 186 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR                                                 ; work         ;
-;                |MUX_2to1:Data_out|                      ; 79 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|MUX_2to1:Data_out                               ; work         ;
-;                   |MUX2to1:MUX_Sel|                     ; 79 (79)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|MUX_2to1:Data_out|MUX2to1:MUX_Sel               ; work         ;
-;                |SRA:SRA_out|                            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRA:SRA_out                                     ; work         ;
-;                   |Shift_Right_arit:SRA1|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRA:SRA_out|Shift_Right_arit:SRA1               ; work         ;
-;                |SRL:SRL_out|                            ; 105 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out                                     ; work         ;
-;                   |Shift_Right:comb_3|                  ; 105 (105)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3                  ; work         ;
-;          |X_OR:D4_in|                                   ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|X_OR:D4_in                                                                       ; work         ;
-;             |XOR1:Xor1|                                 ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ALU|Connect_ALU:ALU|connect:data_in|X_OR:D4_in|XOR1:Xor1                                                             ; work         ;
-+---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; |alu                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 100  ; 0            ; |alu                ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -281,30 +216,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3|ShiftRight0 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3|ShiftRight0 ;
-; 9:1                ; 15 bits   ; 90 LEs        ; 75 LEs               ; 15 LEs                 ; No         ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel|Mux26                                                             ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3|ShiftRight0 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |ALU|Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3|ShiftRight0 ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel|Mux15                                                             ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel|Mux4                                                              ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel|Mux2                                                              ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ALU|Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel|Mux0                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_Block:ALU|SLL:D1_in"                                                                                                                                                          ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; B    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[31].full_adder" ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                           ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------+
-; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_Block:ALU|AddSub:D0_in|Adder:adder_inst|FullAdder:adder_loop[31].full_adder"    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_Block:ALU|AddSub:D0_in|Adder:adder_inst"                                                             ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; C    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -312,7 +248,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -322,97 +258,162 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Apr 25 23:57:23 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+    Info: Processing started: Mon May 27 21:43:24 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Warning (12090): Entity "MUX" obtained from "MUX.sv" instead of from Quartus II megafunction library
-Info (12021): Found 2 design units, including 2 entities, in source file mux.sv
-    Info (12023): Found entity 1: MUX1
-    Info (12023): Found entity 2: MUX
-Info (12021): Found 2 design units, including 2 entities, in source file x_or.sv
-    Info (12023): Found entity 1: XOR1
-    Info (12023): Found entity 2: X_OR
-Info (12021): Found 8 design units, including 8 entities, in source file srl_sra.sv
-    Info (12023): Found entity 1: MUX2to1
-    Info (12023): Found entity 2: MUX_2to1
-    Info (12023): Found entity 3: Shift_Right
-    Info (12023): Found entity 4: SRL
-    Info (12023): Found entity 5: Shift_Right_arit
-    Info (12023): Found entity 6: SRA
-    Info (12023): Found entity 7: SRL_SRA_sel
-    Info (12023): Found entity 8: SRL_SRA
-Info (12021): Found 3 design units, including 3 entities, in source file sltu.sv
-    Info (12023): Found entity 1: Complement_2
-    Info (12023): Found entity 2: LessThan
-    Info (12023): Found entity 3: SLTU
-Info (12021): Found 2 design units, including 2 entities, in source file slt.sv
-    Info (12023): Found entity 1: LessThan1
-    Info (12023): Found entity 2: SLT
-Info (12021): Found 2 design units, including 2 entities, in source file sll.sv
-    Info (12023): Found entity 1: Shift_left
-    Info (12023): Found entity 2: SLL
-Info (12021): Found 2 design units, including 2 entities, in source file or_8.sv
-    Info (12023): Found entity 1: OR1
-    Info (12023): Found entity 2: OR_8
-Info (12021): Found 2 design units, including 2 entities, in source file and_9.sv
-    Info (12023): Found entity 1: AND_1
-    Info (12023): Found entity 2: AND_9
-Info (12021): Found 4 design units, including 4 entities, in source file addsub.sv
+Warning (10229): Verilog HDL Expression warning at alu.sv(142): truncated literal to match 8 bits
+Info (12021): Found 17 design units, including 17 entities, in source file alu.sv
     Info (12023): Found entity 1: FullAdder
     Info (12023): Found entity 2: Adder
-    Info (12023): Found entity 3: AddSub1
-    Info (12023): Found entity 4: AddSub
-Info (12021): Found 3 design units, including 3 entities, in source file alu.sv
-    Info (12023): Found entity 1: connect
-    Info (12023): Found entity 2: Connect_ALU
-    Info (12023): Found entity 3: ALU
+    Info (12023): Found entity 3: AddSub
+    Info (12023): Found entity 4: shift_left
+    Info (12023): Found entity 5: SLL
+    Info (12023): Found entity 6: Complement_2
+    Info (12023): Found entity 7: SLT
+    Info (12023): Found entity 8: SLTU
+    Info (12023): Found entity 9: XOR_Block
+    Info (12023): Found entity 10: SRL
+    Info (12023): Found entity 11: SRA
+    Info (12023): Found entity 12: SRL_SRA
+    Info (12023): Found entity 13: OR_Block
+    Info (12023): Found entity 14: AND_Block
+    Info (12023): Found entity 15: MUX_block
+    Info (12023): Found entity 16: alu_Block
+    Info (12023): Found entity 17: alu
 Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.sv
-    Info (12023): Found entity 1: ALU_tb
-Warning (10236): Verilog HDL Implicit Net warning at SRL_SRA.sv(60): created implicit net for "_32bit1"
-Critical Warning (10846): Verilog HDL Instantiation warning at SRL_SRA.sv(48): instance has no name
-Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Info (12128): Elaborating entity "Connect_ALU" for hierarchy "Connect_ALU:ALU"
-Info (12128): Elaborating entity "connect" for hierarchy "Connect_ALU:ALU|connect:data_in"
-Info (12128): Elaborating entity "AddSub" for hierarchy "Connect_ALU:ALU|connect:data_in|AddSub:D0_in"
-Info (12128): Elaborating entity "AddSub1" for hierarchy "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub"
-Info (12128): Elaborating entity "Adder" for hierarchy "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst"
-Info (12128): Elaborating entity "FullAdder" for hierarchy "Connect_ALU:ALU|connect:data_in|AddSub:D0_in|AddSub1:AddSub|Adder:adder_inst|FullAdder:adder_loop[0].full_adder"
-Info (12128): Elaborating entity "SLL" for hierarchy "Connect_ALU:ALU|connect:data_in|SLL:D1_in"
-Info (12128): Elaborating entity "Shift_left" for hierarchy "Connect_ALU:ALU|connect:data_in|SLL:D1_in|Shift_left:SLL"
-Info (12128): Elaborating entity "SLT" for hierarchy "Connect_ALU:ALU|connect:data_in|SLT:D2_in"
-Info (12128): Elaborating entity "LessThan1" for hierarchy "Connect_ALU:ALU|connect:data_in|SLT:D2_in|LessThan1:LT_inst"
-Info (12128): Elaborating entity "SLTU" for hierarchy "Connect_ALU:ALU|connect:data_in|SLTU:D3_in"
-Info (12128): Elaborating entity "LessThan" for hierarchy "Connect_ALU:ALU|connect:data_in|SLTU:D3_in|LessThan:SLTU"
-Info (12128): Elaborating entity "Complement_2" for hierarchy "Connect_ALU:ALU|connect:data_in|SLTU:D3_in|LessThan:SLTU|Complement_2:A1_B1"
-Info (12128): Elaborating entity "X_OR" for hierarchy "Connect_ALU:ALU|connect:data_in|X_OR:D4_in"
-Info (12128): Elaborating entity "XOR1" for hierarchy "Connect_ALU:ALU|connect:data_in|X_OR:D4_in|XOR1:Xor1"
-Info (12128): Elaborating entity "SRL_SRA" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in"
-Info (12128): Elaborating entity "SRL_SRA_sel" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR"
-Info (12128): Elaborating entity "SRL" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out"
-Info (12128): Elaborating entity "Shift_Right" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRL:SRL_out|Shift_Right:comb_3"
-Info (12128): Elaborating entity "SRA" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRA:SRA_out"
-Info (12128): Elaborating entity "Shift_Right_arit" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|SRA:SRA_out|Shift_Right_arit:SRA1"
-Warning (10230): Verilog HDL assignment warning at SRL_SRA.sv(60): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at SRL_SRA.sv(61): truncated value with size 32 to match size of target (5)
-Info (12128): Elaborating entity "MUX_2to1" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|MUX_2to1:Data_out"
-Info (12128): Elaborating entity "MUX2to1" for hierarchy "Connect_ALU:ALU|connect:data_in|SRL_SRA:D5_in|SRL_SRA_sel:Sel_SR|MUX_2to1:Data_out|MUX2to1:MUX_Sel"
-Info (12128): Elaborating entity "OR_8" for hierarchy "Connect_ALU:ALU|connect:data_in|OR_8:D6_in"
-Info (12128): Elaborating entity "OR1" for hierarchy "Connect_ALU:ALU|connect:data_in|OR_8:D6_in|OR1:or9"
-Info (12128): Elaborating entity "AND_9" for hierarchy "Connect_ALU:ALU|connect:data_in|AND_9:D7_in"
-Info (12128): Elaborating entity "AND_1" for hierarchy "Connect_ALU:ALU|connect:data_in|AND_9:D7_in|AND_1:AND_9"
-Info (12128): Elaborating entity "MUX" for hierarchy "Connect_ALU:ALU|MUX:data_OUT"
-Info (12128): Elaborating entity "MUX1" for hierarchy "Connect_ALU:ALU|MUX:data_OUT|MUX1:MUX_Sel"
-Info (286030): Timing-Driven Synthesis is running
+    Info (12023): Found entity 1: alu_tb
+Warning (10236): Verilog HDL Implicit Net warning at alu.sv(243): created implicit net for "rst_n"
+Info (12127): Elaborating entity "alu" for the top level hierarchy
+Info (12128): Elaborating entity "alu_Block" for hierarchy "alu_Block:ALU"
+Info (12128): Elaborating entity "MUX_block" for hierarchy "alu_Block:ALU|MUX_block:MUX_Sel"
+Info (12128): Elaborating entity "AddSub" for hierarchy "alu_Block:ALU|AddSub:D0_in"
+Info (12128): Elaborating entity "Adder" for hierarchy "alu_Block:ALU|AddSub:D0_in|Adder:adder_inst"
+Warning (10034): Output port "C" at alu.sv(20) has no driver
+Info (12128): Elaborating entity "FullAdder" for hierarchy "alu_Block:ALU|AddSub:D0_in|Adder:adder_inst|FullAdder:adder_loop[0].full_adder"
+Info (12128): Elaborating entity "SLL" for hierarchy "alu_Block:ALU|SLL:D1_in"
+Info (12128): Elaborating entity "shift_left" for hierarchy "alu_Block:ALU|SLL:D1_in|shift_left:block"
+Info (12128): Elaborating entity "SLT" for hierarchy "alu_Block:ALU|SLT:D2_in"
+Info (12128): Elaborating entity "Complement_2" for hierarchy "alu_Block:ALU|SLT:D2_in|Complement_2:A1_B1"
+Info (12128): Elaborating entity "SLTU" for hierarchy "alu_Block:ALU|SLTU:D3_in"
+Info (12128): Elaborating entity "XOR_Block" for hierarchy "alu_Block:ALU|XOR_Block:D4_in"
+Info (12128): Elaborating entity "SRL_SRA" for hierarchy "alu_Block:ALU|SRL_SRA:D5_in"
+Info (12128): Elaborating entity "SRL" for hierarchy "alu_Block:ALU|SRL_SRA:D5_in|SRL:SRL_block"
+Info (12128): Elaborating entity "SRA" for hierarchy "alu_Block:ALU|SRL_SRA:D5_in|SRA:SRA_block"
+Warning (10230): Verilog HDL assignment warning at alu.sv(144): truncated value with size 32 to match size of target (5)
+Info (12128): Elaborating entity "OR_Block" for hierarchy "alu_Block:ALU|OR_Block:D6_in"
+Info (12128): Elaborating entity "AND_Block" for hierarchy "alu_Block:ALU|AND_Block:D7_in"
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "alu_data[0]" is stuck at GND
+    Warning (13410): Pin "alu_data[1]" is stuck at GND
+    Warning (13410): Pin "alu_data[2]" is stuck at GND
+    Warning (13410): Pin "alu_data[3]" is stuck at GND
+    Warning (13410): Pin "alu_data[4]" is stuck at GND
+    Warning (13410): Pin "alu_data[5]" is stuck at GND
+    Warning (13410): Pin "alu_data[6]" is stuck at GND
+    Warning (13410): Pin "alu_data[7]" is stuck at GND
+    Warning (13410): Pin "alu_data[8]" is stuck at GND
+    Warning (13410): Pin "alu_data[9]" is stuck at GND
+    Warning (13410): Pin "alu_data[10]" is stuck at GND
+    Warning (13410): Pin "alu_data[11]" is stuck at GND
+    Warning (13410): Pin "alu_data[12]" is stuck at GND
+    Warning (13410): Pin "alu_data[13]" is stuck at GND
+    Warning (13410): Pin "alu_data[14]" is stuck at GND
+    Warning (13410): Pin "alu_data[15]" is stuck at GND
+    Warning (13410): Pin "alu_data[16]" is stuck at GND
+    Warning (13410): Pin "alu_data[17]" is stuck at GND
+    Warning (13410): Pin "alu_data[18]" is stuck at GND
+    Warning (13410): Pin "alu_data[19]" is stuck at GND
+    Warning (13410): Pin "alu_data[20]" is stuck at GND
+    Warning (13410): Pin "alu_data[21]" is stuck at GND
+    Warning (13410): Pin "alu_data[22]" is stuck at GND
+    Warning (13410): Pin "alu_data[23]" is stuck at GND
+    Warning (13410): Pin "alu_data[24]" is stuck at GND
+    Warning (13410): Pin "alu_data[25]" is stuck at GND
+    Warning (13410): Pin "alu_data[26]" is stuck at GND
+    Warning (13410): Pin "alu_data[27]" is stuck at GND
+    Warning (13410): Pin "alu_data[28]" is stuck at GND
+    Warning (13410): Pin "alu_data[29]" is stuck at GND
+    Warning (13410): Pin "alu_data[30]" is stuck at GND
+    Warning (13410): Pin "alu_data[31]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 658 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 68 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "funct7"
+    Warning (15610): No output dependent on input pin "alu_op[0]"
+    Warning (15610): No output dependent on input pin "alu_op[1]"
+    Warning (15610): No output dependent on input pin "alu_op[2]"
+    Warning (15610): No output dependent on input pin "operand_a[0]"
+    Warning (15610): No output dependent on input pin "operand_a[1]"
+    Warning (15610): No output dependent on input pin "operand_a[2]"
+    Warning (15610): No output dependent on input pin "operand_a[3]"
+    Warning (15610): No output dependent on input pin "operand_a[4]"
+    Warning (15610): No output dependent on input pin "operand_a[5]"
+    Warning (15610): No output dependent on input pin "operand_a[6]"
+    Warning (15610): No output dependent on input pin "operand_a[7]"
+    Warning (15610): No output dependent on input pin "operand_a[8]"
+    Warning (15610): No output dependent on input pin "operand_a[9]"
+    Warning (15610): No output dependent on input pin "operand_a[10]"
+    Warning (15610): No output dependent on input pin "operand_a[11]"
+    Warning (15610): No output dependent on input pin "operand_a[12]"
+    Warning (15610): No output dependent on input pin "operand_a[13]"
+    Warning (15610): No output dependent on input pin "operand_a[14]"
+    Warning (15610): No output dependent on input pin "operand_a[15]"
+    Warning (15610): No output dependent on input pin "operand_a[16]"
+    Warning (15610): No output dependent on input pin "operand_a[17]"
+    Warning (15610): No output dependent on input pin "operand_a[18]"
+    Warning (15610): No output dependent on input pin "operand_a[19]"
+    Warning (15610): No output dependent on input pin "operand_a[20]"
+    Warning (15610): No output dependent on input pin "operand_a[21]"
+    Warning (15610): No output dependent on input pin "operand_a[22]"
+    Warning (15610): No output dependent on input pin "operand_a[23]"
+    Warning (15610): No output dependent on input pin "operand_a[24]"
+    Warning (15610): No output dependent on input pin "operand_a[25]"
+    Warning (15610): No output dependent on input pin "operand_a[26]"
+    Warning (15610): No output dependent on input pin "operand_a[27]"
+    Warning (15610): No output dependent on input pin "operand_a[28]"
+    Warning (15610): No output dependent on input pin "operand_a[29]"
+    Warning (15610): No output dependent on input pin "operand_a[30]"
+    Warning (15610): No output dependent on input pin "operand_a[31]"
+    Warning (15610): No output dependent on input pin "operand_b[0]"
+    Warning (15610): No output dependent on input pin "operand_b[1]"
+    Warning (15610): No output dependent on input pin "operand_b[2]"
+    Warning (15610): No output dependent on input pin "operand_b[3]"
+    Warning (15610): No output dependent on input pin "operand_b[4]"
+    Warning (15610): No output dependent on input pin "operand_b[5]"
+    Warning (15610): No output dependent on input pin "operand_b[6]"
+    Warning (15610): No output dependent on input pin "operand_b[7]"
+    Warning (15610): No output dependent on input pin "operand_b[8]"
+    Warning (15610): No output dependent on input pin "operand_b[9]"
+    Warning (15610): No output dependent on input pin "operand_b[10]"
+    Warning (15610): No output dependent on input pin "operand_b[11]"
+    Warning (15610): No output dependent on input pin "operand_b[12]"
+    Warning (15610): No output dependent on input pin "operand_b[13]"
+    Warning (15610): No output dependent on input pin "operand_b[14]"
+    Warning (15610): No output dependent on input pin "operand_b[15]"
+    Warning (15610): No output dependent on input pin "operand_b[16]"
+    Warning (15610): No output dependent on input pin "operand_b[17]"
+    Warning (15610): No output dependent on input pin "operand_b[18]"
+    Warning (15610): No output dependent on input pin "operand_b[19]"
+    Warning (15610): No output dependent on input pin "operand_b[20]"
+    Warning (15610): No output dependent on input pin "operand_b[21]"
+    Warning (15610): No output dependent on input pin "operand_b[22]"
+    Warning (15610): No output dependent on input pin "operand_b[23]"
+    Warning (15610): No output dependent on input pin "operand_b[24]"
+    Warning (15610): No output dependent on input pin "operand_b[25]"
+    Warning (15610): No output dependent on input pin "operand_b[26]"
+    Warning (15610): No output dependent on input pin "operand_b[27]"
+    Warning (15610): No output dependent on input pin "operand_b[28]"
+    Warning (15610): No output dependent on input pin "operand_b[29]"
+    Warning (15610): No output dependent on input pin "operand_b[30]"
+    Warning (15610): No output dependent on input pin "operand_b[31]"
+Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 68 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 558 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4726 megabytes
-    Info: Processing ended: Thu Apr 25 23:57:28 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 107 warnings
+    Info: Peak virtual memory: 4688 megabytes
+    Info: Processing ended: Mon May 27 21:43:26 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

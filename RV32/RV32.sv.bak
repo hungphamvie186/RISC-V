@@ -1,0 +1,17 @@
+module RV32 (
+    input logic rst, clk, Stop_en,
+    output logic [31:0] ketqua
+);
+		logic [31:0] cur_pc;
+		logic [31:0] nextpc;
+		logic  branch,PCsel;
+	imemfetch_block fetch_block  (
+        .rst(rst),
+        .clk(clk),
+        .Stop_en(Stop_en),
+        .funct3(funct3),
+        .PCSel(PCSel),
+        .cur_pc(cur_pc),
+        .nextpc(nextpc)
+    );
+endmodule

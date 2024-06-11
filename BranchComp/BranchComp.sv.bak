@@ -1,0 +1,64 @@
+`timescale 1ns/1ps
+
+module Comp_sign (
+    input logic DataA,
+    input logic DataB,
+    output logic BrUn, BrLT, BrEq 
+);
+    assign BrUn = ~DataA & DataB;
+    assign BrEq = ~(DataA ^ DataB);
+    assign BrLT = DataA & ~DataB;
+endmodule
+
+module Comp_1 (
+    input logic DataA,
+    input logic DataB,
+    output logic BrUn, BrLT, BrEq 
+);
+    assign BrUn = DataA & ~DataB;
+    assign BrEq = ~(DataA ^ DataB);
+    assign BrLT = ~DataA & DataB;
+endmodule
+
+module BranchComp (
+    input logic [31:0] DataA,
+    input logic [31:0] DataB,
+    output logic BrUn, BrLT, BrEq 
+);
+    logic BrUn_sign, BrLT_sign, BrEq_sign;
+    logic BrUn_temp, BrLT_temp, BrEq_temp;
+
+    // Compare sign bits
+    Comp_sign Compsign(
+        .DataA(DataA[31]),
+        .DataB(DataB[31]),
+        .BrUn(BrUn_sign),
+        .BrLT(BrLT_sign),          
+        .BrEq(BrEq_sign)
+    );
+
+    always_comb begin
+        BrUn_temp = BrUn_sign;
+        BrLT_temp = BrLT_sign;
+        BrEq_temp = BrEq_sign;
+
+        if (BrEq_sign) begin
+            for (int i = 30; i >= 0; i = i - 1) begin
+                Comp_1 Comp1(
+                    .DataA(DataA[i]),
+                    .DataB(DataB[i]),
+                    .BrUn(BrUn_temp),
+                    .BrLT(BrLT_temp),          
+                    .BrEq(BrEq_temp)
+                );
+                if (!BrEq_temp) begin
+                    break;
+                end
+            end
+        end
+
+        BrUn = BrUn_temp;
+        BrLT = BrLT_temp;
+        BrEq = BrEq_temp;
+    end
+endmodule

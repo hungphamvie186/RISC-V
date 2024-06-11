@@ -1,4 +1,121 @@
 |regfile
+rst_ni => rst_ni.IN1
+rd_wren => rd_wren.IN1
+clk_i => clk_i.IN1
+rs1_addr[0] => rs1_addr[0].IN1
+rs1_addr[1] => rs1_addr[1].IN1
+rs1_addr[2] => rs1_addr[2].IN1
+rs1_addr[3] => rs1_addr[3].IN1
+rs1_addr[4] => rs1_addr[4].IN1
+rs2_addr[0] => rs2_addr[0].IN1
+rs2_addr[1] => rs2_addr[1].IN1
+rs2_addr[2] => rs2_addr[2].IN1
+rs2_addr[3] => rs2_addr[3].IN1
+rs2_addr[4] => rs2_addr[4].IN1
+rd_addr[0] => rd_addr[0].IN1
+rd_addr[1] => rd_addr[1].IN1
+rd_addr[2] => rd_addr[2].IN1
+rd_addr[3] => rd_addr[3].IN1
+rd_addr[4] => rd_addr[4].IN1
+rd_data[0] => rd_data[0].IN1
+rd_data[1] => rd_data[1].IN1
+rd_data[2] => rd_data[2].IN1
+rd_data[3] => rd_data[3].IN1
+rd_data[4] => rd_data[4].IN1
+rd_data[5] => rd_data[5].IN1
+rd_data[6] => rd_data[6].IN1
+rd_data[7] => rd_data[7].IN1
+rd_data[8] => rd_data[8].IN1
+rd_data[9] => rd_data[9].IN1
+rd_data[10] => rd_data[10].IN1
+rd_data[11] => rd_data[11].IN1
+rd_data[12] => rd_data[12].IN1
+rd_data[13] => rd_data[13].IN1
+rd_data[14] => rd_data[14].IN1
+rd_data[15] => rd_data[15].IN1
+rd_data[16] => rd_data[16].IN1
+rd_data[17] => rd_data[17].IN1
+rd_data[18] => rd_data[18].IN1
+rd_data[19] => rd_data[19].IN1
+rd_data[20] => rd_data[20].IN1
+rd_data[21] => rd_data[21].IN1
+rd_data[22] => rd_data[22].IN1
+rd_data[23] => rd_data[23].IN1
+rd_data[24] => rd_data[24].IN1
+rd_data[25] => rd_data[25].IN1
+rd_data[26] => rd_data[26].IN1
+rd_data[27] => rd_data[27].IN1
+rd_data[28] => rd_data[28].IN1
+rd_data[29] => rd_data[29].IN1
+rd_data[30] => rd_data[30].IN1
+rd_data[31] => rd_data[31].IN1
+rs1_data[0] << regfile_Block:mregfile.rs1_data
+rs1_data[1] << regfile_Block:mregfile.rs1_data
+rs1_data[2] << regfile_Block:mregfile.rs1_data
+rs1_data[3] << regfile_Block:mregfile.rs1_data
+rs1_data[4] << regfile_Block:mregfile.rs1_data
+rs1_data[5] << regfile_Block:mregfile.rs1_data
+rs1_data[6] << regfile_Block:mregfile.rs1_data
+rs1_data[7] << regfile_Block:mregfile.rs1_data
+rs1_data[8] << regfile_Block:mregfile.rs1_data
+rs1_data[9] << regfile_Block:mregfile.rs1_data
+rs1_data[10] << regfile_Block:mregfile.rs1_data
+rs1_data[11] << regfile_Block:mregfile.rs1_data
+rs1_data[12] << regfile_Block:mregfile.rs1_data
+rs1_data[13] << regfile_Block:mregfile.rs1_data
+rs1_data[14] << regfile_Block:mregfile.rs1_data
+rs1_data[15] << regfile_Block:mregfile.rs1_data
+rs1_data[16] << regfile_Block:mregfile.rs1_data
+rs1_data[17] << regfile_Block:mregfile.rs1_data
+rs1_data[18] << regfile_Block:mregfile.rs1_data
+rs1_data[19] << regfile_Block:mregfile.rs1_data
+rs1_data[20] << regfile_Block:mregfile.rs1_data
+rs1_data[21] << regfile_Block:mregfile.rs1_data
+rs1_data[22] << regfile_Block:mregfile.rs1_data
+rs1_data[23] << regfile_Block:mregfile.rs1_data
+rs1_data[24] << regfile_Block:mregfile.rs1_data
+rs1_data[25] << regfile_Block:mregfile.rs1_data
+rs1_data[26] << regfile_Block:mregfile.rs1_data
+rs1_data[27] << regfile_Block:mregfile.rs1_data
+rs1_data[28] << regfile_Block:mregfile.rs1_data
+rs1_data[29] << regfile_Block:mregfile.rs1_data
+rs1_data[30] << regfile_Block:mregfile.rs1_data
+rs1_data[31] << regfile_Block:mregfile.rs1_data
+rs2_data[0] << regfile_Block:mregfile.rs2_data
+rs2_data[1] << regfile_Block:mregfile.rs2_data
+rs2_data[2] << regfile_Block:mregfile.rs2_data
+rs2_data[3] << regfile_Block:mregfile.rs2_data
+rs2_data[4] << regfile_Block:mregfile.rs2_data
+rs2_data[5] << regfile_Block:mregfile.rs2_data
+rs2_data[6] << regfile_Block:mregfile.rs2_data
+rs2_data[7] << regfile_Block:mregfile.rs2_data
+rs2_data[8] << regfile_Block:mregfile.rs2_data
+rs2_data[9] << regfile_Block:mregfile.rs2_data
+rs2_data[10] << regfile_Block:mregfile.rs2_data
+rs2_data[11] << regfile_Block:mregfile.rs2_data
+rs2_data[12] << regfile_Block:mregfile.rs2_data
+rs2_data[13] << regfile_Block:mregfile.rs2_data
+rs2_data[14] << regfile_Block:mregfile.rs2_data
+rs2_data[15] << regfile_Block:mregfile.rs2_data
+rs2_data[16] << regfile_Block:mregfile.rs2_data
+rs2_data[17] << regfile_Block:mregfile.rs2_data
+rs2_data[18] << regfile_Block:mregfile.rs2_data
+rs2_data[19] << regfile_Block:mregfile.rs2_data
+rs2_data[20] << regfile_Block:mregfile.rs2_data
+rs2_data[21] << regfile_Block:mregfile.rs2_data
+rs2_data[22] << regfile_Block:mregfile.rs2_data
+rs2_data[23] << regfile_Block:mregfile.rs2_data
+rs2_data[24] << regfile_Block:mregfile.rs2_data
+rs2_data[25] << regfile_Block:mregfile.rs2_data
+rs2_data[26] << regfile_Block:mregfile.rs2_data
+rs2_data[27] << regfile_Block:mregfile.rs2_data
+rs2_data[28] << regfile_Block:mregfile.rs2_data
+rs2_data[29] << regfile_Block:mregfile.rs2_data
+rs2_data[30] << regfile_Block:mregfile.rs2_data
+rs2_data[31] << regfile_Block:mregfile.rs2_data
+
+
+|regfile|regfile_Block:mregfile
 rst_ni => _.IN1
 rst_ni => _.IN1
 rst_ni => _.IN1
@@ -146,7 +263,7 @@ rs2_data[30] <= MUX:muxB.y[30]
 rs2_data[31] <= MUX:muxB.y[31]
 
 
-|regfile|MUX2:rdaddr_en
+|regfile|regfile_Block:mregfile|MUX2:rdaddr_en
 A[0] => out.DATAB
 A[1] => out.DATAB
 A[2] => out.DATAB
@@ -164,47 +281,52 @@ out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|decoder:decoder5_32
+|regfile|regfile_Block:mregfile|decoder:decoder5_32
 x[0] => ShiftLeft0.IN37
+x[0] => Equal0.IN31
 x[1] => ShiftLeft0.IN36
+x[1] => Equal0.IN30
 x[2] => ShiftLeft0.IN35
+x[2] => Equal0.IN29
 x[3] => ShiftLeft0.IN34
+x[3] => Equal0.IN28
 x[4] => ShiftLeft0.IN33
-en[0] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[1] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[2] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[3] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[4] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[5] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[6] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[7] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[8] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[9] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[10] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[11] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[12] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[13] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[14] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[15] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[16] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[17] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[18] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[19] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[20] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[21] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[22] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[23] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[24] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[25] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[26] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[27] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[28] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[29] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[30] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-en[31] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+x[4] => Equal0.IN27
+en[0] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[1] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[2] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[3] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[4] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[5] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[6] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[7] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[8] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[9] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[10] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[11] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[12] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[13] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[14] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[15] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[16] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[17] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[18] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[19] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[20] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[21] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[22] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[23] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[24] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[25] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[26] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[27] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[28] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[29] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[30] <= en.DB_MAX_OUTPUT_PORT_TYPE
+en[31] <= en.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[0].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[0].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -367,7 +489,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[1].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[1].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -530,7 +652,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[2].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[2].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -693,7 +815,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[3].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[3].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -856,7 +978,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[4].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[4].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -1019,7 +1141,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[5].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[5].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -1182,7 +1304,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[6].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[6].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -1345,7 +1467,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[7].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[7].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -1508,7 +1630,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[8].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[8].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -1671,7 +1793,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[9].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[9].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -1834,7 +1956,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[10].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[10].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -1997,7 +2119,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[11].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[11].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -2160,7 +2282,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[12].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[12].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -2323,7 +2445,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[13].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[13].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -2486,7 +2608,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[14].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[14].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -2649,7 +2771,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[15].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[15].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -2812,7 +2934,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[16].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[16].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -2975,7 +3097,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[17].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[17].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -3138,7 +3260,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[18].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[18].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -3301,7 +3423,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[19].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[19].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -3464,7 +3586,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[20].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[20].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -3627,7 +3749,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[21].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[21].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -3790,7 +3912,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[22].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[22].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -3953,7 +4075,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[23].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[23].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -4116,7 +4238,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[24].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[24].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -4279,7 +4401,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[25].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[25].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -4442,7 +4564,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[26].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[26].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -4605,7 +4727,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[27].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[27].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -4768,7 +4890,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[28].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[28].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -4931,7 +5053,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[29].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[29].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -5094,7 +5216,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[30].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[30].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -5257,7 +5379,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|register:register_loop[31].register_inst
+|regfile|regfile_Block:mregfile|register:register_loop[31].register_inst
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
 rst => Q.OUTPUTSELECT
@@ -5420,7 +5542,7 @@ Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|MUX:muxA
+|regfile|regfile_Block:mregfile|MUX:muxA
 d[0][0] => Mux31.IN31
 d[0][1] => Mux30.IN31
 d[0][2] => Mux29.IN31
@@ -6639,7 +6761,7 @@ y[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|regfile|MUX:muxB
+|regfile|regfile_Block:mregfile|MUX:muxB
 d[0][0] => Mux31.IN31
 d[0][1] => Mux30.IN31
 d[0][2] => Mux29.IN31
