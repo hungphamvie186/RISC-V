@@ -1,0 +1,22 @@
+/* verilator lint_off WIDTH */
+/* verilator lint_off UNUSED */
+module imem (
+    input  logic        clk         ,  // Clock
+    input  logic        rst_n       ,  // Reset, active low
+    input  logic [31:0] i_imem_addr ,  // Địa chỉ đầu vào 32-bit
+    output logic [31:0] o_imem_data    // Dữ liệu đầu ra 32-bit (1 câu lệnh)
+);
+
+    
+    logic [31:0] mem [2**11 - 1:0];
+
+    // Khởi tạo bộ nhớ từ file `instruction.mem` khi reset
+   initial begin
+	   $readmemh("/earth/mars/mars04/workspace/School_Pj/milestone2/singlecycle/03_test/instruction.txt", mem);
+    end
+                // Lấy 1 câu lệnh 32-bit từ địa chỉ `i_imem_addr`
+ 	assign      o_imem_data = mem[i_imem_addr[31:2]];
+            
+endmodule : imem
+/* verilator lint_on WIDTH */
+/* verilator lint_off UNUSED */

@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at wrapper.sv(8): object "LEDR" differs only in case from object "ledr" in the same scope
+Info (10281): Verilog HDL Declaration information at wrapper.sv(9): object "LEDG" differs only in case from object "ledg" in the same scope

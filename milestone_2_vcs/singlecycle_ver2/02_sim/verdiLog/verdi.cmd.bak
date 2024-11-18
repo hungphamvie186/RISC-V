@@ -1,0 +1,103 @@
+verdiSetActWin -dock widgetDock_<Message>
+debImport "-sverilog" "-f" "../00_src/flist.f" "design_test.fsdb"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvCreateWindow
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+schCreateWindow -delim "." -win $_nSchema1 -scope "design_test"
+verdiSetActWin -win $_nSchema_3
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -instName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -completeName on
+schSelect -win $_nSchema3 -inst "dut"
+schSelect -win $_nSchema3 -inst "dut"
+schPushViewIn -win $_nSchema3
+verdiSetActWin -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/earth/mars/mars04/workspace/School_Pj/milestone2/singlecycle/02_sim/design_test.fsdb}
+schZoomIn -win $_nSchema3 -pos 63464 21482
+schZoomIn -win $_nSchema3 -pos 63025 22009
+schZoomIn -win $_nSchema3 -pos 63024 22009
+verdiSetActWin -win $_nSchema_3
+schSelect -win $_nSchema3 -inst "lsu_block"
+schPushViewIn -win $_nSchema3
+schZoomIn -win $_nSchema3 -pos 24552 19106
+schZoomIn -win $_nSchema3 -pos 24552 19105
+schZoomIn -win $_nSchema3 -pos 9095 11046
+schZoomIn -win $_nSchema3 -pos 9095 11046
+schZoomIn -win $_nSchema3 -pos 9095 11046
+schZoomOut -win $_nSchema3 -pos 10521 14979
+schZoomOut -win $_nSchema3 -pos 10521 14979
+schZoomOut -win $_nSchema3 -pos 10521 14979
+schZoomIn -win $_nSchema3 -pos 8664 14463
+schZoomIn -win $_nSchema3 -pos 8625 14463
+schZoomIn -win $_nSchema3 -pos 8566 14463
+schZoomOut -win $_nSchema3 -pos 16658 11648
+schZoomOut -win $_nSchema3 -pos 16604 11593
+schZoomOut -win $_nSchema3 -pos 16434 11423
+schZoomOut -win $_nSchema3 -pos 16434 11422
+schZoomOut -win $_nSchema3 -pos 32099 11368
+schZoomOut -win $_nSchema3 -pos 32099 11368
+schSelect -win $_nSchema3 -inst "op"
+schPushViewIn -win $_nSchema3
+schZoomIn -win $_nSchema3 -pos 52894 32158
+schZoomIn -win $_nSchema3 -pos 52894 32258
+schZoomIn -win $_nSchema3 -pos 52894 32259
+schZoomIn -win $_nSchema3 -pos 52894 32258
+schSelect -win $_nSchema3 -inst "red_reg"
+schDeselectAll -win $_nSchema3
+schSelect -win $_nSchema3 -inst "red_reg"
+verdiSetActWin -win $_nWave2
+wvSetFileTimeRange -win $_nWave2 -time_unit 1p 0 1010
+verdiSetActWin -win $_nSchema_3
+schSelect -win $_nSchema3 -inst "red_reg"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+verdiSetActWin -win $_nWave2
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+wvSetCursor -win $_nWave2 11.061278 -snap {("G1" 4)}
+verdiSetActWin -win $_nWave2
+wvSetCursor -win $_nWave2 15.538462 -snap {("G1" 4)}
+schZoomOut -win $_nSchema3 -pos 43449 39161
+schZoomOut -win $_nSchema3 -pos 43448 39161
+schZoomOut -win $_nSchema3 -pos 43448 39162
+verdiSetActWin -win $_nSchema_3
+schZoomOut -win $_nSchema3 -pos 43448 39161
+schZoomIn -win $_nSchema3 -pos 4985 22925
+schZoomIn -win $_nSchema3 -pos 4984 22925
+schZoomIn -win $_nSchema3 -pos 4984 22925
+schZoomIn -win $_nSchema3 -pos 4896 22837
+schZoomIn -win $_nSchema3 -pos 4765 22803
+schZoomOut -win $_nSchema3 -pos 6606 21606
+schZoomOut -win $_nSchema3 -pos 6606 21605
+schZoomOut -win $_nSchema3 -pos 6605 21606
+schZoomOut -win $_nSchema3 -pos 6606 21606
+schZoomOut -win $_nSchema3 -pos 6605 21605
+schZoomOut -win $_nSchema3 -pos 6605 21605
+schSelect -win $_nSchema3 -port "output_buf_en"
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -signal "i_rst"
+schZoomIn -win $_nSchema3 -pos 38130 30807
+schZoomIn -win $_nSchema3 -pos 38130 30871
+schZoomIn -win $_nSchema3 -pos 38083 30871
+schSelect -win $_nSchema3 -signal "input_buffer_out\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+schDeselectAll -win $_nSchema3
+schSelect -win $_nSchema3 -signal "i_io_sw\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 5 )} 
+verdiSetActWin -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 7 )} 
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+verdiSetActWin -win $_nSchema_3

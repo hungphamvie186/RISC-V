@@ -1,0 +1,67 @@
+module wrapper (
+  // inputs
+	input  logic [17:0] SW,
+	input logic [3:0] KEY,
+	input logic CLOCK_50,
+  
+  // outputs
+	output logic [17:0] LEDR,
+	output logic [8:0] LEDG,
+	output logic [6:0] HEX0,
+	output logic [6:0] HEX1,
+	output logic [6:0] HEX2,
+	output logic [6:0] HEX3,
+	output logic [6:0] HEX4,
+	output logic [6:0] HEX5,
+	output logic [6:0] HEX6,
+	output logic [6:0] HEX7,
+  
+  //SRAM
+	output reg [17:0] SRAM_ADDR,
+	inout wire [15:0] SRAM_DQ,
+	output reg	  SRAM_CE_N,
+	output reg    	  SRAM_WE_N,
+	output reg 		  SRAM_LB_N,
+	output reg 		  SRAM_UB_N,
+	output reg 		  SRAM_OE_N
+  
+);
+wire [31:0] switch;
+assign switch = {15'b0,SW};
+wire [31:0] button;
+assign button = {28'b0,KEY};
+wire [31:0] ledr, ledg;
+assign LEDR = ledr[17:0];
+assign LEDG = ledg[8:0];
+
+
+  singlecycle uut (
+   .i_clk(CLOCK_50),
+	.i_rst_n(SW[17]),
+	.i_io_sw(switch),
+	.i_io_btn(button),
+//output
+	.o_pc_debug(),
+	.o_insn_vld(),
+	.o_io_ledr(ledr),
+	.o_io_ledg(ledg),
+	.o_io_hex0(HEX0),
+	.o_io_hex1(HEX1),
+	.o_io_hex2(HEX2),
+	.o_io_hex3(HEX3),
+	.o_io_hex4(HEX4),
+	.o_io_hex5(HEX5),
+	.o_io_hex6(HEX6),
+	.o_io_hex7(HEX7),
+	.o_io_lcd(),
+
+	.SRAM_ADDR(SRAM_ADDR),
+	.SRAM_DQ(SRAM_DQ),
+	.SRAM_CE_N(SRAM_CE_N),
+	.SRAM_WE_N(SRAM_WE_N),
+	.SRAM_LB_N(SRAM_LB_N),
+	.SRAM_UB_N(SRAM_UB_N),
+	.SRAM_OE_N(SRAM_OE_N)
+	);
+
+endmodule : wrapper

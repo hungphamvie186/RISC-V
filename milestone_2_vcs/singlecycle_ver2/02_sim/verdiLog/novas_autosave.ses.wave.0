@@ -1,0 +1,91 @@
+Magic 271485
+Revision Verdi_V-2023.12-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1920 406 309 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/earth/mars/mars04/workspace/School_Pj/milestone2/singlecycle/02_sim/design_test.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 63.125000
+cursor 0.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 25
+; marker line index
+markerPos 37
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/earth/mars/mars04/workspace/School_Pj/milestone2/singlecycle/02_sim/design_test.fsdb"
+addSignal -h 16 -UNSIGNED -HEX /design_test/dut/alu_data[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope alu_op[3:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope operand_b[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope operand_a[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope immediate[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope instr[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_pc_debug[31:0]
+addSignal -h 16 /design_test/dut/lsu_block/sram_lb_n
+addSignal -h 16 /design_test/SRAM_OE_N
+addSignal -h 16 -holdScope SRAM_UB_N
+addSignal -h 16 -holdScope SRAM_LB_N
+addSignal -h 16 -holdScope SRAM_WE_N
+addSignal -h 16 -holdScope SRAM_CE_N
+addSignal -h 16 -UNSIGNED -HEX -holdScope SRAM_DQ[15:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope SRAM_ADDR[17:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_io_lcd[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_io_hex7[6:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_io_hex6[6:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_io_hex5[6:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_io_hex4[6:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_io_hex3[6:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_io_hex2[6:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_io_hex1[6:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_io_hex0[6:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_io_ledg[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_io_ledr[31:0]
+addSignal -h 16 -holdScope o_insn_vld
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_pc_debug[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope i_io_btn[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope i_io_sw[31:0]
+addSignal -h 16 -holdScope i_rst_n
+addSignal -h 16 -holdScope i_clk
+addSignal -h 16 -UNSIGNED -HEX /design_test/dut/o_pc_debug[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_pc_debug[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_pc_debug[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_pc_debug[31:0]
+addSignal -h 16 -UNSIGNED -HEX -holdScope o_pc_debug[31:0]
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

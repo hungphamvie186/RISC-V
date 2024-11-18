@@ -1,0 +1,274 @@
+D:/CTMT/Milstone2/singlecycle/00_src/singlecycle.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/singlecycle.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module singlecycle
+
+Top level modules:
+	singlecycle
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/pc_plus4.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/pc_plus4.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module pc_plus4
+
+Top level modules:
+	pc_plus4
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/out_mux.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/out_mux.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module out_mux
+
+Top level modules:
+	out_mux
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/input_buffer.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/input_buffer.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module input_buffer
+
+Top level modules:
+	input_buffer
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/alu.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/alu.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/full_adder.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/full_adder.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module full_adder
+
+Top level modules:
+	full_adder
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/register_nor.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/register_nor.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module register_nor
+
+Top level modules:
+	register_nor
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/register_byte_word.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/register_byte_word.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module register_byte_word
+
+Top level modules:
+	register_byte_word
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/sll.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/sll.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sll
+
+Top level modules:
+	sll
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/immGen.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/immGen.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module immGen
+
+Top level modules:
+	immGen
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/xor_32bit.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/xor_32bit.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module xor_32bit
+
+Top level modules:
+	xor_32bit
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/01_tb/testbench.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/01_tb/testbench.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module wrapper_test
+
+Top level modules:
+	wrapper_test
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/04_kit/output_files/wrapper.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/04_kit/output_files/wrapper.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module wrapper
+
+Top level modules:
+	wrapper
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/regfile/MUX.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/regfile/MUX.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MUX
+
+Top level modules:
+	MUX
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/BRC/00_src/cla_32bit.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/BRC/00_src/cla_32bit.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module cla_32bit
+
+Top level modules:
+	cla_32bit
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/and_32bit.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/and_32bit.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module and_32bit
+
+Top level modules:
+	and_32bit
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/sra.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/sra.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sra
+
+Top level modules:
+	sra
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/pc_reg.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/pc_reg.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module pc_reg
+
+Top level modules:
+	pc_reg
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/controlunit.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/controlunit.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module controlunit
+
+Top level modules:
+	controlunit
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/regfile/MUX2.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/regfile/MUX2.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MUX2
+
+Top level modules:
+	MUX2
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/decode_buf.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/decode_buf.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module decode_buf
+
+Top level modules:
+	decode_buf
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/adder.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/adder.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/regfile/register.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/regfile/register.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/mux_4to1.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/mux_4to1.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mux_4to1
+
+Top level modules:
+	mux_4to1
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/slr.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/slr.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module slr
+
+Top level modules:
+	slr
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/subtractor.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/subtractor.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module subtractor
+
+Top level modules:
+	subtractor
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/regfile/regfile.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/regfile/regfile.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module regfile
+
+Top level modules:
+	regfile
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/output_buffer.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/output_buffer.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module output_buffer
+
+Top level modules:
+	output_buffer
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/BRC/00_src/mux_2to1.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/BRC/00_src/mux_2to1.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mux_2to1
+
+Top level modules:
+	mux_2to1
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/BRC/00_src/BRC.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/BRC/00_src/BRC.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module BRC
+
+Top level modules:
+	BRC
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/slt.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/slt.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module slt
+
+Top level modules:
+	slt
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/LSU.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/LSU.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module LSU
+
+Top level modules:
+	LSU
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/or_32bit.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/or_32bit.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module or_32bit
+
+Top level modules:
+	or_32bit
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/BRC/00_src/cla_4bit.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/BRC/00_src/cla_4bit.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module cla_4bit
+
+Top level modules:
+	cla_4bit
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/regfile/decoder_5to32.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/regfile/decoder_5to32.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module decoder_5to32
+
+Top level modules:
+	decoder_5to32
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/decoder_2to4.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/decoder_2to4.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module decoder_2to4
+
+Top level modules:
+	decoder_2to4
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/imem.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/imem.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module imem
+
+Top level modules:
+	imem
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/sram_IS61WV25616_controller_32b_3lr.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/LSU/00_src/sram_IS61WV25616_controller_32b_3lr.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sram_IS61WV25616_controller_32b_3lr
+
+Top level modules:
+	sram_IS61WV25616_controller_32b_3lr
+
+} {} {}} D:/CTMT/Milstone2/singlecycle/00_src/alu/sltu.sv {1 {vlog -work work -sv D:/CTMT/Milstone2/singlecycle/00_src/alu/sltu.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sltu
+
+Top level modules:
+	sltu
+
+} {} {}}
