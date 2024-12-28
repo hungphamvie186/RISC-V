@@ -1,0 +1,203 @@
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+debImport "-sverilog" "-f" "../12_vcs/flist.f" "design_test.fsdb"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiWindowResize -win $_Verdi_1 "500" "180" "900" "700"
+schCreateWindow -delim "." -win $_nSchema1 -scope "tbench"
+verdiSetActWin -win $_nSchema_2
+wvCreateWindow
+wvSetPosition -win $_nWave3 {("G1" 0)}
+wvOpenFile -win $_nWave3 \
+           {/earth/mars/mars04/workspace/School_Pj/milestone_3/last_single_scoreboard/12_vcs/tbench.fsdb}
+verdiSetActWin -win $_nSchema_2
+schSetOptions -win $_nSchema2 -portName on
+schSetOptions -win $_nSchema2 -pinName on
+schSetOptions -win $_nSchema2 -instName on
+schSetOptions -win $_nSchema2 -localNetName on
+schSetOptions -win $_nSchema2 -completeName on
+schSelect -win $_nSchema2 -inst "singlecycle"
+schZoomIn -win $_nSchema2 -pos 22052 18274
+schZoomIn -win $_nSchema2 -pos 22051 18273
+schZoomIn -win $_nSchema2 -pos 22051 18274
+schZoomIn -win $_nSchema2 -pos 22051 18274
+schZoomIn -win $_nSchema2 -pos 22051 18274
+schSelect -win $_nSchema2 -signal "o_io_ledr\[31:0\]"
+schAddSelectedToWave -win $_nSchema2 -clipboard
+wvDrop -win $_nWave3
+wvZoomOut -win $_nWave3
+verdiSetActWin -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvSetCursor -win $_nWave3 19196.418929
+wvSetCursor -win $_nWave3 19200.040558
+schSelect -win $_nSchema2 -signal "o_pc_debug\[31:0\]"
+verdiSetActWin -win $_nSchema_2
+schAddSelectedToWave -win $_nSchema2 -clipboard
+wvDrop -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+verdiSetActWin -win $_nWave3
+wvSetCursor -win $_nWave3 19618.939884
+wvSetCursor -win $_nWave3 19259.891188 -snap {("G1" 1)}
+wvZoomIn -win $_nWave3
+wvSetCursor -win $_nWave3 19839.724017 -snap {("G1" 2)}
+wvSetCursor -win $_nWave3 19880.019962 -snap {("G1" 2)}
+wvZoomOut -win $_nWave3
+wvSetCursor -win $_nWave3 20479.433461 -snap {("G1" 1)}
+wvSetCursor -win $_nWave3 19879.069159 -snap {("G1" 1)}
+wvSetCursor -win $_nWave3 19879.485732 -snap {("G1" 1)}
+wvZoomOut -win $_nWave3
+wvSetCursor -win $_nWave3 19879.682123 -snap {("G1" 2)}
+verdiSetActWin -win $_nSchema_2
+schFocusConnection -win $_nSchema2
+schSelect -win $_nSchema2 -inst "singlecycle"
+schPushViewIn -win $_nSchema2
+schSelect -win $_nSchema2 -inst "lsu_block"
+schPushViewIn -win $_nSchema2
+schZoomIn -win $_nSchema2 -pos 25410 33212
+schZoomIn -win $_nSchema2 -pos 25410 33318
+schZoomIn -win $_nSchema2 -pos 25410 33159
+schZoomIn -win $_nSchema2 -pos 22365 40726
+schZoomIn -win $_nSchema2 -pos 22365 40726
+schSelect -win $_nSchema2 -signal "i_lsu_wren"
+schAddSelectedToWave -win $_nSchema2 -clipboard
+wvDrop -win $_nWave3
+schSelect -win $_nSchema2 -signal "i_lsu_rden"
+schAddSelectedToWave -win $_nSchema2 -clipboard
+wvDrop -win $_nWave3
+schSelect -win $_nSchema2 -signal "i_lsu_addr\[31:0\]"
+schAddSelectedToWave -win $_nSchema2 -clipboard
+wvDrop -win $_nWave3
+schSelect -win $_nSchema2 -signal "i_st_data\[31:0\]"
+schAddSelectedToWave -win $_nSchema2 -clipboard
+wvDrop -win $_nWave3
+debReload
+debReload
+schSelect -win $_nSchema2 -signal "i_st_data\[31:0\]"
+schZoomOut -win $_nSchema2 -pos 15536 36364
+schZoomOut -win $_nSchema2 -pos 15536 36363
+schZoomOut -win $_nSchema2 -pos 15536 36363
+schZoomOut -win $_nSchema2 -pos 15536 36363
+schZoomOut -win $_nSchema2 -pos 15536 36362
+schZoomOut -win $_nSchema2 -pos 15536 36362
+schZoomOut -win $_nSchema2 -pos 15535 36362
+schZoomOut -win $_nSchema2 -pos 15535 36362
+schZoomOut -win $_nSchema2 -pos 15535 36361
+schZoomIn -win $_nSchema2 -pos 1698 14976
+schZoomIn -win $_nSchema2 -pos 1698 14976
+schZoomIn -win $_nSchema2 -pos 1697 14975
+schZoomIn -win $_nSchema2 -pos 1697 14975
+schSelect -win $_nSchema2 -port "i_st_data\[31:0\]"
+schPopViewUp -win $_nSchema2
+schZoomIn -win $_nSchema2 -pos 41282 6893
+schZoomIn -win $_nSchema2 -pos 39431 7456
+schZoomIn -win $_nSchema2 -pos 85038 17158
+schZoomIn -win $_nSchema2 -pos 85038 17157
+schZoomIn -win $_nSchema2 -pos 85987 16003
+schZoomIn -win $_nSchema2 -pos 85988 16003
+schSelect -win $_nSchema2 -inst "regfile_block"
+schPushViewIn -win $_nSchema2
+schZoomIn -win $_nSchema2 -pos 81168 17311
+schZoomIn -win $_nSchema2 -pos 80679 16821
+schZoomIn -win $_nSchema2 -pos 80678 16821
+schZoomIn -win $_nSchema2 -pos 80678 16820
+schZoomIn -win $_nSchema2 -pos 80678 16819
+schZoomIn -win $_nSchema2 -pos 80368 4639
+schZoomIn -win $_nSchema2 -pos 80368 4523
+schZoomIn -win $_nSchema2 -pos 80367 4523
+schZoomIn -win $_nSchema2 -pos 79910 584
+schZoomIn -win $_nSchema2 -pos 79910 584
+schZoomIn -win $_nSchema2 -pos 79910 583
+schSelect -win $_nSchema2 -port "o_rs2_data\[31:0\]"
+schAddSelectedToWave -win $_nSchema2 -clipboard
+wvDrop -win $_nWave3
+verdiSetActWin -win $_nWave3
+schZoomOut -win $_nSchema2 -pos 76768 748
+schZoomOut -win $_nSchema2 -pos 76837 783
+verdiSetActWin -win $_nSchema_2
+schZoomOut -win $_nSchema2 -pos 77095 -681
+schZoomOut -win $_nSchema2 -pos 77256 -628
+schZoomOut -win $_nSchema2 -pos 77525 -762
+schZoomOut -win $_nSchema2 -pos 77525 -762
+schZoomOut -win $_nSchema2 -pos 77525 -762
+schZoomOut -win $_nSchema2 -pos 25359 7779
+schZoomOut -win $_nSchema2 -pos 25359 7778
+schZoomOut -win $_nSchema2 -pos 25359 7777
+schZoomIn -win $_nSchema2 -pos 4571 4441
+schZoomIn -win $_nSchema2 -pos 4185 4441
+schZoomIn -win $_nSchema2 -pos 3897 4296
+schZoomIn -win $_nSchema2 -pos 3572 4296
+schZoomIn -win $_nSchema2 -pos 3406 4295
+schZoomIn -win $_nSchema2 -pos 3345 4295
+schSelect -win $_nSchema2 -port "i_rd_addr\[4:0\]"
+schAddSelectedToWave -win $_nSchema2 -clipboard
+wvDrop -win $_nWave3
+verdiSetActWin -win $_nWave3
+wvSelectSignal -win $_nWave3 {( "G1" 8 )} 
+wvSetRadix -win $_nWave3 -format UDec
+schSelect -win $_nSchema2 -port "i_rd_addr\[4:0\]"
+schPopViewUp -win $_nSchema2
+verdiSetActWin -win $_nSchema_2
+schZoomOut -win $_nSchema2 -pos 74448 15434
+schZoomOut -win $_nSchema2 -pos 74497 15262
+schZoomOut -win $_nSchema2 -pos 74650 15108
+schZoomOut -win $_nSchema2 -pos 74765 15108
+schZoomOut -win $_nSchema2 -pos 76396 10119
+schZoomIn -win $_nSchema2 -pos 14536 5429
+schZoomIn -win $_nSchema2 -pos 14535 5473
+schSelect -win $_nSchema2 -signal "instr\[31:0\]"
+schAddSelectedToWave -win $_nSchema2 -clipboard
+wvDrop -win $_nWave3
+wvZoomIn -win $_nWave3
+verdiSetActWin -win $_nWave3
+wvZoomIn -win $_nWave3
+wvSelectSignal -win $_nWave3 {( "G1" 9 )} 
+wvSetRadix -win $_nWave3 -format Bin
+wvZoomIn -win $_nWave3
+schZoomOut -win $_nSchema2 -pos 32276 12793
+schZoomOut -win $_nSchema2 -pos 32277 12708
+schZoomOut -win $_nSchema2 -pos 32277 12707
+schZoomOut -win $_nSchema2 -pos 32342 12640
+verdiSetActWin -win $_nSchema_2
+schZoomOut -win $_nSchema2 -pos 33906 11899
+schZoomIn -win $_nSchema2 -pos 51919 9472
+schZoomIn -win $_nSchema2 -pos 51841 9395
+schZoomIn -win $_nSchema2 -pos 51725 9279
+schZoomIn -win $_nSchema2 -pos 51509 9061
+schZoomIn -win $_nSchema2 -pos 51183 8508
+schZoomIn -win $_nSchema2 -pos 51182 8459
+schSelect -win $_nSchema2 -signal "funct3\[2:0\]"
+schAddSelectedToWave -win $_nSchema2 -clipboard
+wvDrop -win $_nWave3
+wvSetCursor -win $_nWave3 19859.969296 -snap {("G1" 3)}
+verdiSetActWin -win $_nWave3
+wvSelectSignal -win $_nWave3 {( "G1" 2 )} 
+wvSetCursor -win $_nWave3 19879.573952 -snap {("G1" 2)}
+wvZoomOut -win $_nWave3
+wvSetCursor -win $_nWave3 20480.362546 -snap {("G1" 2)}
+schZoomOut -win $_nSchema2 -pos 51640 8304
+schZoomOut -win $_nSchema2 -pos 51640 8303
+schZoomOut -win $_nSchema2 -pos 51640 8303
+verdiSetActWin -win $_nSchema_2
+schZoomOut -win $_nSchema2 -pos 51639 8303
+schZoomOut -win $_nSchema2 -pos 51638 8303
+schZoomOut -win $_nSchema2 -pos 51638 8302
+schZoomOut -win $_nSchema2 -pos 51637 8302
+schZoomIn -win $_nSchema2 -pos 127229 29289
+schZoomIn -win $_nSchema2 -pos 127229 29288
+schZoomIn -win $_nSchema2 -pos 127230 29337
+schZoomIn -win $_nSchema2 -pos 127010 29817
+schZoomIn -win $_nSchema2 -pos 127009 29816
+schZoomIn -win $_nSchema2 -pos 127010 29816
+schZoomIn -win $_nSchema2 -pos 127011 29815
+schSelect -win $_nSchema2 -port "o_io_ledr\[31:0\]"
+schAddSelectedToWave -win $_nSchema2 -clipboard
+wvDrop -win $_nWave3
+verdiSetActWin -win $_nWave3
+wvSetCursor -win $_nWave3 19880.190477 -snap {("G1" 2)}
+wvSetCursor -win $_nWave3 20460.180425 -snap {("G1" 5)}
+debExit

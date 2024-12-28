@@ -1,5 +1,0 @@
-Info (10281): Verilog HDL Declaration information at PC.sv(58): object "Pc_4" differs only in case from object "PC_4" in the same scope
-Info (10281): Verilog HDL Declaration information at PC.sv(52): object "PCsel" differs only in case from object "PCSel" in the same scope
-Info (10281): Verilog HDL Declaration information at ImmGen.sv(4): object "imm" differs only in case from object "Imm" in the same scope
-Info (10281): Verilog HDL Declaration information at ImmGen.sv(26): object "imm" differs only in case from object "Imm" in the same scope
-Info (10281): Verilog HDL Declaration information at RV32.sv(18): object "imm" differs only in case from object "Imm" in the same scope

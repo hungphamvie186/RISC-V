@@ -1,3 +1,0 @@
-Info (10281): Verilog HDL Declaration information at ImmGen.sv(4): object "imm" differs only in case from object "Imm" in the same scope
-Info (10281): Verilog HDL Declaration information at ImmGen.sv(26): object "imm" differs only in case from object "Imm" in the same scope
-Info (10281): Verilog HDL Declaration information at ImmGen_tb.sv(6): object "imm" differs only in case from object "Imm" in the same scope

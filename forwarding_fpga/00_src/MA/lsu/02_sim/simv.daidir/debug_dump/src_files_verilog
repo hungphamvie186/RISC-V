@@ -1,0 +1,9 @@
+/earth/mars/mars04/workspace/School_Pj/milestone_3/test for debug/00_src/LSU.sv
+/earth/mars/mars04/workspace/School_Pj/milestone_3/test for debug/00_src/decode_buf.sv
+/earth/mars/mars04/workspace/School_Pj/milestone_3/test for debug/00_src/dmem.sv
+/earth/mars/mars04/workspace/School_Pj/milestone_3/test for debug/00_src/input_bank.sv
+/earth/mars/mars04/workspace/School_Pj/milestone_3/test for debug/00_src/mux_4to1.sv
+/earth/mars/mars04/workspace/School_Pj/milestone_3/test for debug/00_src/out_mux.sv
+/earth/mars/mars04/workspace/School_Pj/milestone_3/test for debug/00_src/output_bank.sv
+/earth/mars/mars04/workspace/School_Pj/milestone_3/test for debug/00_src/register_nor.sv
+/earth/mars/mars04/workspace/School_Pj/milestone_3/test for debug/01_tb/testbench.sv

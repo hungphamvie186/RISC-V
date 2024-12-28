@@ -1,0 +1,3 @@
+Command Line: /tools/synopsys//verdi/V-2023.12-SP2/platform/LINUXAMD64/bin/Novas -sverilog -f ../00_src/flist.f design_test.fsdb
+uname(Linux himalia.doelab.site 4.18.0-553.8.1.el8_10.x86_64 #1 SMP Tue Jul 2 17:10:26 UTC 2024 x86_64)
+au time 39047.573513 361.505782 558.723423 delta 782864384 782864384 total 1438679040 1438679040

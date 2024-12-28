@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="non_forwarding">
+		<CBX_INST_ENTRY INSTANCE_NAME="|wrapper|non_forwarding:dut|IF_stage:IF_block|imem:imem_block|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_pu71.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

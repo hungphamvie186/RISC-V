@@ -1,0 +1,8 @@
+
+./../00_src/singlecycle.sv
+./../01_bench/tlib.svh
+./../01_bench/driver.sv
+./../01_bench/scoreboard.sv
+./../01_bench/tbench.sv
+./conf.vlt
+-top tbench

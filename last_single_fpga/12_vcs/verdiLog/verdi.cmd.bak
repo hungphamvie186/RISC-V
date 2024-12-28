@@ -1,0 +1,166 @@
+verdiSetActWin -dock widgetDock_<Message>
+debImport "-sverilog" "-f" "../00_src/flist.f" "design_test.fsdb"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schCreateWindow -delim "." -win $_nSchema1 -scope "design_test"
+verdiSetActWin -win $_nSchema_2
+wvCreateWindow
+verdiSetActWin -win $_nSchema_2
+schSetOptions -win $_nSchema2 -portName on
+schSetOptions -win $_nSchema2 -pinName on
+schSetOptions -win $_nSchema2 -instName on
+schSetOptions -win $_nSchema2 -localNetName on
+schSetOptions -win $_nSchema2 -completeName on
+schSelect -win $_nSchema2 -inst "dut"
+schPushViewIn -win $_nSchema2
+verdiDockWidgetMaximize -dock windowDock_nSchema_2
+schZoomIn -win $_nSchema2 -pos 122001 22678
+schZoomIn -win $_nSchema2 -pos 121797 22626
+schZoomIn -win $_nSchema2 -pos 121568 22588
+schSelect -win $_nSchema2 -signal "pc_sel"
+schSelect -win $_nSchema2 -signal "pc_four\[31:0\]"
+schSelect -win $_nSchema2 -signal "alu_data\[31:0\]"
+schSelect -win $_nSchema2 -signal "alu_data\[31:0\]"
+schSelect -win $_nSchema2 -signal "pc_four\[31:0\]"
+schSelect -win $_nSchema2 -signal "alu_data\[31:0\]"
+schZoomOut -win $_nSchema2 -pos 109970 24902
+schZoomOut -win $_nSchema2 -pos 108747 27476
+schZoomOut -win $_nSchema2 -pos 108747 27297
+schZoomOut -win $_nSchema2 -pos 108690 27296
+schZoomOut -win $_nSchema2 -pos 108690 27296
+schZoomOut -win $_nSchema2 -pos 108689 27296
+schZoomIn -win $_nSchema2 -pos 108688 27296
+schZoomIn -win $_nSchema2 -pos 108688 27295
+schZoomIn -win $_nSchema2 -pos 110972 20318
+schZoomIn -win $_nSchema2 -pos 110926 20317
+schSelect -win $_nSchema2 -signal "pc_four\[31:0\]"
+schSelect -win $_nSchema2 -signal "pc_four\[31:0\]"
+schZoomOut -win $_nSchema2 -pos 89565 15424
+schZoomOut -win $_nSchema2 -pos 89652 15076
+schZoomIn -win $_nSchema2 -pos 40973 3951
+schZoomIn -win $_nSchema2 -pos 40973 3951
+schZoomIn -win $_nSchema2 -pos 41613 4073
+schZoomOut -win $_nSchema2 -pos 56220 10872
+schZoomOut -win $_nSchema2 -pos 56449 10528
+schZoomOut -win $_nSchema2 -pos 57451 9490
+schZoomOut -win $_nSchema2 -pos 57763 9131
+schZoomOut -win $_nSchema2 -pos 57763 9131
+schZoomIn -win $_nSchema2 -pos 118976 24615
+schZoomIn -win $_nSchema2 -pos 118976 24615
+schZoomIn -win $_nSchema2 -pos 118976 24614
+schZoomOut -win $_nSchema2 -pos 113616 18845
+schSelect -win $_nSchema2 -signal "pc_sel"
+schSelect -win $_nSchema2 -inst "controlunit"
+schPushViewIn -win $_nSchema2
+schSelect -win $_nSchema2 -inst "controlunit:Always0:44:300:Combo"
+schPushViewIn -win $_nSchema2
+srcSetScope "design_test.dut.controlunit" -delim "." -win $_nTrace1
+srcSelect -win $_nTrace1 -range {44 300 1 3 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schSelect -win $_nSchema2 -inst "controlunit:Always0:44:300:Combo"
+schPushViewIn -win $_nSchema2
+srcSelect -win $_nTrace1 -range {44 300 1 3 1 1}
+verdiSetActWin -win $_nSchema_2
+schSelect -win $_nSchema2 -inst "controlunit:Always0:44:300:Combo"
+schPushViewIn -win $_nSchema2
+srcSelect -win $_nTrace1 -range {44 300 1 3 1 1}
+schSelect -win $_nSchema2 -inst "controlunit:Always0:44:300:Combo"
+schPushViewIn -win $_nSchema2
+srcSelect -win $_nTrace1 -range {44 300 1 3 1 1}
+schSelect -win $_nSchema2 -inst "controlunit:Always0:44:300:Combo"
+schSelect -win $_nSchema2 -port "br_equal"
+schPopViewUp -win $_nSchema2
+schZoomIn -win $_nSchema2 -pos 30340 10783
+schZoomIn -win $_nSchema2 -pos 30339 10783
+schZoomIn -win $_nSchema2 -pos 30338 10783
+schZoomIn -win $_nSchema2 -pos 30322 10782
+schZoomOut -win $_nSchema2 -pos 37239 13065
+schZoomOut -win $_nSchema2 -pos 37238 13034
+schZoomOut -win $_nSchema2 -pos 37238 13033
+schZoomOut -win $_nSchema2 -pos 37238 13033
+schZoomOut -win $_nSchema2 -pos 37237 13032
+schZoomOut -win $_nSchema2 -pos 37237 13032
+schZoomOut -win $_nSchema2 -pos 37236 13032
+schZoomOut -win $_nSchema2 -pos 38161 12974
+schZoomOut -win $_nSchema2 -pos 68465 5886
+schZoomOut -win $_nSchema2 -pos 69097 6066
+schZoomOut -win $_nSchema2 -pos 69322 6179
+schZoomOut -win $_nSchema2 -pos 86836 10839
+schPanRight -win $_nSchema2
+schPanRight -win $_nSchema2
+schPanRight -win $_nSchema2
+schPanRight -win $_nSchema2
+schZoomIn -win $_nSchema2 -pos 99371 19491
+schZoomIn -win $_nSchema2 -pos 85731 17372
+schZoomIn -win $_nSchema2 -pos 126551 24820
+schZoomIn -win $_nSchema2 -pos 126327 25193
+schZoomOut -win $_nSchema2 -pos 103309 17985
+schZoomOut -win $_nSchema2 -pos 103309 16518
+schPanLeft -win $_nSchema2
+schPanLeft -win $_nSchema2
+schPanRight -win $_nSchema2
+schZoomIn -win $_nSchema2 -pos 35396 7265
+schSelect -win $_nSchema2 -signal "pc\[31:0\]"
+schPanRight -win $_nSchema2
+schZoomIn -win $_nSchema2 -pos 122337 24220
+schZoomIn -win $_nSchema2 -pos 122337 24221
+schZoomIn -win $_nSchema2 -pos 122338 24220
+schZoomIn -win $_nSchema2 -pos 122338 24247
+schSelect -win $_nSchema2 -signal "pc_four\[31:0\]"
+schZoomOut -win $_nSchema2 -pos 110406 16325
+schZoomOut -win $_nSchema2 -pos 110405 16326
+schZoomOut -win $_nSchema2 -pos 110405 16325
+schZoomOut -win $_nSchema2 -pos 110405 16325
+schSelect -win $_nSchema2 -signal "alu_data\[31:0\]"
+schSelect -win $_nSchema2 -inst "wb_block"
+schSelect -win $_nSchema2 -inst "wb_block"
+schPushViewIn -win $_nSchema2
+schSelect -win $_nSchema2 -inst "mux_4to1\(@1\):Always0:11:19:Combo"
+schPushViewIn -win $_nSchema2
+srcSetScope "design_test.dut.wb_block" -delim "." -win $_nTrace1
+srcSelect -win $_nTrace1 -range {11 19 1 2 1 1}
+schSelect -win $_nSchema2 -inst "mux_4to1\(@1\):Always0:11:19:Combo"
+schPushViewIn -win $_nSchema2
+srcSelect -win $_nTrace1 -range {11 19 1 2 1 1}
+schSelect -win $_nSchema2 -inst "mux_4to1\(@1\):Always0:11:19:Combo"
+schPushViewIn -win $_nSchema2
+srcSelect -win $_nTrace1 -range {11 19 1 2 1 1}
+schSelect -win $_nSchema2 -inst "mux_4to1\(@1\):Always0:11:19:Combo"
+schPushViewIn -win $_nSchema2
+srcSelect -win $_nTrace1 -range {11 19 1 2 1 1}
+schSelect -win $_nSchema2 -inst "mux_4to1\(@1\):Always0:11:19:Combo"
+schPushViewIn -win $_nSchema2
+srcSelect -win $_nTrace1 -range {11 19 1 2 1 1}
+schSelect -win $_nSchema2 -inst "mux_4to1\(@1\):Always0:11:19:Combo"
+schPushViewIn -win $_nSchema2
+srcSelect -win $_nTrace1 -range {11 19 1 2 1 1}
+schSelect -win $_nSchema2 -inst "mux_4to1\(@1\):Always0:11:19:Combo"
+verdiDockWidgetRestore -dock windowDock_nSchema_2
+verdiSetActWin -win $_nWave3
+schSelect -win $_nSchema2 -inst "mux_4to1\(@1\):Always0:11:19:Combo"
+schPushViewIn -win $_nSchema2
+srcSelect -win $_nTrace1 -range {11 19 1 2 1 1}
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiDockWidgetSetCurTab -dock windowDock_nSchema_2
+verdiSetActWin -win $_nSchema_2
+schSelect -win $_nSchema2 -port "sel\[1:0\]"
+schPopViewUp -win $_nSchema2
+schZoomIn -win $_nSchema2 -pos 106415 7043
+schZoomIn -win $_nSchema2 -pos 106415 6779
+schZoomIn -win $_nSchema2 -pos 106809 7107
+schZoomIn -win $_nSchema2 -pos 106711 7107
+schSelect -win $_nSchema2 -signal "wb_sel\[1:0\]"
+schSelect -win $_nSchema2 -instport "controlunit" "wb_sel\[1:0\]"
+schPushViewIn -win $_nSchema2
+schSelect -win $_nSchema2 -signal "wb_sel\[1:0\]"
+schFocusConnection -win $_nSchema2
+schSelect -win $_nSchema2 -signal "wb_sel\[1:0\]"
+schFocusConnection -win $_nSchema2
+schSelect -win $_nSchema2 -signal "wb_sel\[1:0\]"
+schFocusConnection -win $_nSchema2
+schSelect -win $_nSchema2 -inst "controlunit:Always0:44:300:Combo"
+schPushViewIn -win $_nSchema2
+srcSetScope "design_test.dut.controlunit" -delim "." -win $_nTrace1
+srcSelect -win $_nTrace1 -range {44 300 1 3 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1

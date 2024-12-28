@@ -1,0 +1,9 @@
+../00_src/mux_4to1.sv
+../00_src/register_nor.sv
+../00_src/decode_buf.sv
+../00_src/input_bank.sv
+../00_src/output_bank.sv
+../00_src/dmem.sv
+../00_src/out_mux.sv
+../00_src/LSU.sv
+../01_tb/testbench.sv

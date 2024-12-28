@@ -1,2 +1,0 @@
-Info (10281): Verilog HDL Declaration information at PC.sv(58): object "Pc_4" differs only in case from object "PC_4" in the same scope
-Info (10281): Verilog HDL Declaration information at PC.sv(52): object "PCsel" differs only in case from object "PCSel" in the same scope
